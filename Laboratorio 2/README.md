@@ -39,4 +39,5 @@ Como siguiente paso, se propone la tabla de verdad considerando todos los posibl
 * Q4: 0=hay suficiente energia solar, 1= no hay
 * Q5: 0=esta en paro de emergencia, 1=no esta en paro de emergencia
 
+Como ultimo paso para el dominio comportamental se plantea un diagrame de flujo para representar de manera gráfica y secuencial el algoritmo de la solución que se planteo
 ![Diagrame de flujo](https://github.com/JeredyBeltran/Images/blob/main/Diagrama.png?raw=true)
