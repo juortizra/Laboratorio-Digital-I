@@ -111,11 +111,14 @@ Para cada una de las salidas, las ecuaciones que describen su comportamiento en 
   <img src="./Mapa6.png" alt="mapa" width="350">
 
 
-## **3. Simulación de Ladder **
+## **3. Simulación de Ladder**
 Utilizando la herramienta de simulación online plcsimulator, se llevó a cabo la síntesis del circuito eléctrico en lenguaje Ladder. Se separaron las líneas de alimentación en función de los actuadores (Q), y se reemplazaron las compuertas lógicas AND y OR con su respectivo equivalente. El circuito resultante es el siguiente: 
 
  <img src="./Ladder.png" alt="mapa" width="350">
 
- Link: \url{https://app.plcsimulator.online/twmCwPZXIzObVHRrbVEI}
- 
+ Link: https://app.plcsimulator.online/twmCwPZXIzObVHRrbVEI
+
+ ## **4. Descripción en lenguaje HDL**
+ ## **5. Síntesis en FPGA**
+ ## **6. Conclusiones** 
  
