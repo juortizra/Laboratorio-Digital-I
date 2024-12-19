@@ -1,26 +1,27 @@
 # Mi primer diseño 
-1. **Dominio Comportamental(Especificación y Algoritmo)**
+## 1. **Dominio Comportamental (Especificación y Algoritmo)**
 Se plantea inicilamente el comportamiento esperado por el sistema, utilizando como medio el diagrama de caja Negra, en el que se representan las entradas y salidas de infomación. En esta situación problema se plantean las siguientas entradas y salidas:
 
-I0 = Red eléctrica (Sensor de fuente 1)
+* **$I_0$** = Red eléctrica (Sensor de fuente 1)
 
-I1 = Banco de baterias (Sensor de fuente 2)
+* **$I_1$** = Banco de baterías (Sensor de fuente 2)
 
-I2 = Energía solar (Sensor de Luz)
+* **$I_2$** = Energía solar (Sensor de Luz)
 
-I3 = Boton de paro de emergencia 
+* **$I_3$** = Botón de paro de emergencia
 
-Q0 = Relé de conmutación entre fuentes
+* **$Q_0$** = Relé de conmutación entre fuentes
 
-Q1 = Relé para energizar o desenergizar 
+* **$Q_1$** = Relé para energizar o desenergizar
 
-Q2 = Indicador cuando las baterias estan descargadas
+* **$Q_2$** = Indicador cuando las baterías están descargadas
 
-Q3 = Indicador de red eléctrica disponible
+* **$Q_3$** = Indicador de red eléctrica disponible
 
-Q4 = Indicador de suficiente radiación solar
+* **$Q_4$** = Indicador de suficiente radiación solar
 
-Q5 = Desenergización de la casa para mantenimiento
+* **$Q_5$** = Desenergización de la casa para mantenimiento
+
 
 ![Diagrama de Caja Negra](https://github.com/JeredyBeltran/Images/blob/main/Caja%20(2).png?raw=true)
 
@@ -28,18 +29,68 @@ Como siguiente paso, se propone la tabla de verdad considerando todos los posibl
 
 ![Tabla de Verdad](https://github.com/JeredyBeltran/Images/blob/main/Tabla.png?raw=true)
 
-* I0: 0=no hay red, 1=hay red
-* I1: 0=bateria descargada, 1=bateria cargada
-* I2: 0=no hay energía solar, 1=hay energía solar
-* I3: 0=no esta activo, 1=esta activo
-* Q0: 0=Conmutación a red eléctrica, 1=Conmutación al banco de baterias
-* Q1: 0=Casa energizada, 1=Casa desenergizada
-* Q2: 0=bateria  descargada, 1=bateria cargada
-* Q3: 0=no hay red, 1=hay red
-* Q4: 0=hay suficiente energia solar, 1= no hay
-* Q5: 0=esta en paro de emergencia, 1=no esta en paro de emergencia
+* **$I_0$**  
+  * 0 = No hay red  
+  * 1 = Hay red  
 
-Como ultimo paso para el dominio comportamental se plantea un diagrame de flujo para representar de manera gráfica y secuencial el algoritmo de la solución que se planteo
+* **$I_1$**  
+  * 0 = Batería descargada  
+  * 1 = Batería cargada  
+
+* **$I_2$**  
+  * 0 = No hay energía solar  
+  * 1 = Hay energía solar  
+
+* **$I_3$**  
+  * 0 = No está activo  
+  * 1 = Está activo  
+
+* **$Q_0$**  
+  * 0 = Conmutación a red eléctrica  
+  * 1 = Conmutación al banco de baterías  
+
+* **$Q_1$**  
+  * 0 = Casa energizada  
+  * 1 = Casa desenergizada  
+
+* **$Q_2$**  
+  * 0 = Batería descargada  
+  * 1 = Batería cargada  
+
+* **$Q_3$**  
+  * 0 = No hay red  
+  * 1 = Hay red  
+
+* **$Q_4$**  
+  * 0 = Hay suficiente energía solar  
+  * 1 = No hay suficiente energía solar  
+
+* **$Q_5$**  
+  * 0 = Está en paro de emergencia  
+  * 1 = No está en paro de emergencia
+
+
+Como último paso, para el dominio comportamental se plantea un diagrame de flujo para representar de manera gráfica y secuencial el algoritmo de la solución que se planteó.
 
 ![Diagrame de flujo](https://github.com/JeredyBeltran/Images/blob/main/Diagrama.png?raw=true)
 
+## **2. Dominio físico inicial**
+
+La información contenida en la tabla de verdad se consignó y sintentizó en Digital con el fin de crear el circuito eléctrico equivalente en una combinación de compuertas lógicas AND y OR. 
+### **Ecuaciones de salida**
+Para cada una de las salidas, las ecuaciones que describen su comportamiento en cada uno de los posibles casos son: 
+* **$Q_0$** (Relé conmutador) = $I_0$
+* **$Q_1$** (Relé energizar la casa) = $(I_0 \wedge \overline{I_3})\, \vee \, (I_1 \wedge \overline{I_3}$
+* 
+
+
+\begin{equation}
+\begin{aligned}
+& \text { Q0 }=10 \\
+& \text { Q1 }=(10 \wedge \overline{13}) \vee(11 \wedge \overline{13}) \\
+& \text { Q2 }=\overline{11} \wedge \overline{3} \\
+& \text { Q3 }=10 \wedge \overline{3} \\
+& \text { Q4 }=12 \wedge \overline{13} \\
+& \text { Q5 }=13
+\end{aligned}
+\end{equation}
