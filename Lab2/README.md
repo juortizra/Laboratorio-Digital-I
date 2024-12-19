@@ -80,6 +80,7 @@ La información contenida en la tabla de verdad se consignó y sintentizó en Di
 ### **Ecuaciones de salida y Mapas de Karnaugh**
 Para cada una de las salidas, las ecuaciones que describen su comportamiento en cada uno de los posibles casos son: 
 * **$Q_0$** (Relé conmutador) = $I_0$
+* Mapa de Karnaugh: //
 ![mapa](./Mapa1.png)
 * **$Q_1$** (Relé energizar la casa) = $(I_0 \wedge \overline{I_3})\ \vee \ (I_1 \wedge \overline{I_3})$
 * **$Q_2$** (LED Sensor de batería) = $(\overline{I_0} \wedge \overline{I_3})$
