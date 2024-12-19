@@ -72,7 +72,7 @@ Como siguiente paso, se propone la tabla de verdad considerando todos los posibl
 
 Como último paso, para el dominio comportamental se plantea un diagrame de flujo para representar de manera gráfica y secuencial el algoritmo de la solución que se planteó.
 
-![Diagrama de flujo](/Diagrama.png)
+![Diagrama de flujo](./Diagrama.png)
 
 ## **2. Dominio físico y estructural**
 
