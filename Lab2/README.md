@@ -112,4 +112,7 @@ Para cada una de las salidas, las ecuaciones que describen su comportamiento en 
 
 
 ## **3. Simulación de Ladder **
-Utilizando la herramienta de simulación online \textit{plcsimulator.online}
+Utilizando la herramienta de simulación online plcsimulator, se llevó a cabo la síntesis del circuito eléctrico en lenguaje Ladder. Se separaron las líneas de alimentación en función de los actuadores (Q), y se reemplazaron las compuertas lógicas AND y OR con su respectivo equivalente. El circuito resultante es el siguiente: 
+
+ <img src="./Mapa6.png" alt="mapa" width="350">
+ 
