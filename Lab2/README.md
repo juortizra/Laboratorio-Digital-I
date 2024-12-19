@@ -76,7 +76,7 @@ Como último paso, para el dominio comportamental se plantea un diagrame de fluj
 
 ## **2. Dominio físico y estructural**
 
-La información contenida en la tabla de verdad se consignó y sintentizó en Digital con el fin de crear el circuito eléctrico equivalente en una combinación de compuertas lógicas AND y OR. 
+La información contenida en la [tabla de verdad](./TablaVerdad.tru) se consignó y sintentizó en Digital con el fin de crear el circuito eléctrico equivalente en una combinación de compuertas lógicas AND y OR. 
 
 ### **Ecuaciones de salida y Mapas de Karnaugh**
 Para cada una de las salidas, las ecuaciones que describen su comportamiento en cada uno de los posibles casos son: 
@@ -110,7 +110,9 @@ Para cada una de las salidas, las ecuaciones que describen su comportamiento en 
   
   <img src="./Mapa6.png" alt="mapa" width="350">
 
-La siguiente figura muestra el diagrama [esquemático] ()]del circuito eléctrico: 
+La siguiente figura muestra el diagrama [esquemático](./Lab2.dig)] del circuito eléctrico: 
+
+ ![circuitolab2](./CircuitoLab2.png)
 
 ## **3. Simulación de Ladder**
 Utilizando la herramienta de simulación online plcsimulator, se llevó a cabo la síntesis del circuito eléctrico en lenguaje Ladder. Se separaron las líneas de alimentación en función de los actuadores (Q), y se reemplazaron las compuertas lógicas AND y OR con su respectivo equivalente. El circuito resultante es el siguiente: 
