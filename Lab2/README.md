@@ -81,15 +81,35 @@ La información contenida en la tabla de verdad se consignó y sintentizó en Di
 ### **Ecuaciones de salida y Mapas de Karnaugh**
 Para cada una de las salidas, las ecuaciones que describen su comportamiento en cada uno de los posibles casos son: 
 * **$Q_0$** (Relé conmutador) = $I_0$
-* Mapa de Karnaugh:
+  * Mapa de Karnaugh:
   
-  <img src="./Mapa1.png" alt="mapa" width="400">
+  <img src="./Mapa1.png" alt="mapa" width="350">
  
 * **$Q_1$** (Relé energizar la casa) = $(I_0 \wedge \overline{I_3})\ \vee \ (I_1 \wedge \overline{I_3})$
+   * Mapa de Karnaugh:
+  
+  <img src="./Mapa2.png" alt="mapa" width="350">
+ 
 * **$Q_2$** (LED Sensor de batería) = $(\overline{I_0} \wedge \overline{I_3})$
+   * Mapa de Karnaugh:
+  
+  <img src="./Mapa3.png" alt="mapa" width="350">
+ 
 * **$Q_3$** (LED Sensor de red eléctrica) = $(I_0 \wedge \overline{I_3})$
+   * Mapa de Karnaugh:
+  
+  <img src="./Mapa4.png" alt="mapa" width="350">
+ 
 * **$Q_4$** (LED Sensor de energía solar) = $(I_2 \wedge \overline{I_3})$
+   * Mapa de Karnaugh:
+  
+  <img src="./Mapa5.png" alt="mapa" width="350">
+ 
 * **$Q_5$** (LED Paro de emergína) = $I_3$
+  * Mapa de Karnaugh:
+  
+  <img src="./Mapa6.png" alt="mapa" width="350">
 
-### 
 
+## **3. Simulación de Ladder **
+Utilizando la herramienta de simulación online \textit{plcsimulator.online}
