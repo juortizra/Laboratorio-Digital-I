@@ -10,6 +10,18 @@ I2 = Energía solar (Sensor de Luz)
 
 I3 = Boton de paro de emergencia 
 
+Q0 = Relé de conmutación entre fuentes
+
+Q1 = Relé para energizar o desenergizar 
+
+Q2 = Indicador cuando las baterias estan descargadas
+
+Q3 = Indicador de red eléctrica disponible
+
+Q4 = Indicador de suficiente radiación solar
+
+Q5 = Desenergización de la casa para mantenimiento
+
 ![Diagrama de Caja Negra](https://github.com/JeredyBeltran/Images/blob/main/Caja%20(2).png?raw=true)
 ![Tabla de Verdad](https://github.com/JeredyBeltran/Images/blob/main/Tabla.png?raw=true)
 ![Diagrame de flujo](https://github.com/JeredyBeltran/Images/blob/main/Diagrama.png?raw=true)
