@@ -23,11 +23,11 @@ Se plantea inicilamente el comportamiento esperado por el sistema, se utiliza co
 * **$Q_5$** = Desenergización de la casa para mantenimiento
 
 
-![Diagrama de Caja Negra](https://github.com/JeredyBeltran/Images/blob/main/Caja%20(2).png?raw=true)
+![Diagrama de Caja Negra](./Caja1.png)
 
 Como siguiente paso, se propone la tabla de verdad considerando todos los posibles casos, en este punto hacemos uso de la condición Don't Care y de las siguientes condiciones(facilitan la construcción de la tabla de verdad dadas las definiciones de los parametros):
 
-![Tabla de Verdad](https://github.com/JeredyBeltran/Images/blob/main/Tabla.png?raw=true)
+![Tabla de Verdad](./Tabla.png)
 
 * **$I_0$**  
   * 0 = No hay red  
@@ -72,7 +72,7 @@ Como siguiente paso, se propone la tabla de verdad considerando todos los posibl
 
 Como último paso, para el dominio comportamental se plantea un diagrame de flujo para representar de manera gráfica y secuencial el algoritmo de la solución que se planteó.
 
-![Diagrame de flujo](https://github.com/JeredyBeltran/Images/blob/main/Diagrama.png?raw=true)
+![Diagrama de flujo](/Diagrama.png)
 
 ## **2. Dominio físico y estructural**
 
