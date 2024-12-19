@@ -117,7 +117,7 @@ La siguiente figura muestra el diagrama [esquemático](./Lab2.dig) del circuito 
 ## **3. Simulación de Ladder**
 Utilizando la herramienta de simulación online plcsimulator, se llevó a cabo la síntesis del circuito eléctrico en lenguaje Ladder. Se separaron las líneas de alimentación en función de los actuadores (Q), y se reemplazaron las compuertas lógicas AND y OR con su respectivo equivalente. El circuito resultante es el siguiente: 
 
- <img src="./Ladder.png" alt="mapa" width="350">
+ [Ladder](./Ladder.png)
 
  Link: https://app.plcsimulator.online/twmCwPZXIzObVHRrbVEI
 
