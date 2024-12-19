@@ -74,15 +74,17 @@ Como último paso, para el dominio comportamental se plantea un diagrame de fluj
 
 ![Diagrame de flujo](https://github.com/JeredyBeltran/Images/blob/main/Diagrama.png?raw=true)
 
-## **2. Dominio físico inicial**
+## **2. Dominio físico y estructural**
 
 La información contenida en la tabla de verdad se consignó y sintentizó en Digital con el fin de crear el circuito eléctrico equivalente en una combinación de compuertas lógicas AND y OR. 
 ### **Ecuaciones de salida**
 Para cada una de las salidas, las ecuaciones que describen su comportamiento en cada uno de los posibles casos son: 
 * **$Q_0$** (Relé conmutador) = $I_0$
-* **$Q_1$** (Relé energizar la casa) = $(I_0 \wedge \overline{I_3})\, \vee \, (I_1 \wedge \overline{I_3})$
+* **$Q_1$** (Relé energizar la casa) = $(I_0 \wedge \overline{I_3})\ \vee \ (I_1 \wedge \overline{I_3})$
 * **$Q_2$** (LED Sensor de batería) = $(\overline{I_0} \wedge \overline{I_3})$
 * **$Q_3$** (LED Sensor de red eléctrica) = $(I_0 \wedge \overline{I_3})$
 * **$Q_4$** (LED Sensor de energía solar) = $(I_2 \wedge \overline{I_3})$
 * **$Q_5$** (LED Paro de emergína) = $I_3$
+
+### 
 
