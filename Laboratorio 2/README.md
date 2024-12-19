@@ -80,17 +80,9 @@ La información contenida en la tabla de verdad se consignó y sintentizó en Di
 ### **Ecuaciones de salida**
 Para cada una de las salidas, las ecuaciones que describen su comportamiento en cada uno de los posibles casos son: 
 * **$Q_0$** (Relé conmutador) = $I_0$
-* **$Q_1$** (Relé energizar la casa) = $(I_0 \wedge \overline{I_3})\, \vee \, (I_1 \wedge \overline{I_3}$
-* 
+* **$Q_1$** (Relé energizar la casa) = $(I_0 \wedge \overline{I_3})\, \vee \, (I_1 \wedge \overline{I_3})$
+* **$Q_2$** (LED Sensor de batería) = $(\overline{I_0} \wedge \overline{I_3})$
+* **$Q_3$** (LED Sensor de red eléctrica) = $(I_0 \wedge \overline{I_3})$
+* **$Q_4$** (LED Sensor de energía solar) = $(I_2 \wedge \overline{I_3})$
+* **$Q_5$** (LED Paro de emergína) = $I_3$
 
-
-\begin{equation}
-\begin{aligned}
-& \text { Q0 }=10 \\
-& \text { Q1 }=(10 \wedge \overline{13}) \vee(11 \wedge \overline{13}) \\
-& \text { Q2 }=\overline{11} \wedge \overline{3} \\
-& \text { Q3 }=10 \wedge \overline{3} \\
-& \text { Q4 }=12 \wedge \overline{13} \\
-& \text { Q5 }=13
-\end{aligned}
-\end{equation}
