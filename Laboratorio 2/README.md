@@ -1,6 +1,6 @@
 # Mi primer diseño 
 ## 1. **Dominio Comportamental (Especificación y Algoritmo)**
-Se plantea inicilamente el comportamiento esperado por el sistema, utilizando como medio el diagrama de caja Negra, en el que se representan las entradas y salidas de infomación. En esta situación problema se plantean las siguientas entradas y salidas:
+Se plantea inicilamente el comportamiento esperado por el sistema, se utiliza como medio el diagrama de caja Negra, en el que se representan las entradas y salidas de infomación. En esta situación problema se plantean las siguientas entradas y salidas:
 
 * **$I_0$** = Red eléctrica (Sensor de fuente 1)
 
