@@ -28,10 +28,15 @@ Como siguiente paso, se propone la tabla de verdad considerando todos los posibl
 
 ![Tabla de Verdad](https://github.com/JeredyBeltran/Images/blob/main/Tabla.png?raw=true)
 
-*  I0: 0=no hay red, 1=hay red
+* I0: 0=no hay red, 1=hay red
 * I1: 0=bateria descargada, 1=bateria cargada
 * I2: 0=no hay energía solar, 1=hay energía solar
 * I3: 0=no esta activo, 1=esta activo
-
+* Q0: 0=Conmutación a red eléctrica, 1=Conmutación al banco de baterias
+* Q1: 0=Casa energizada, 1=Casa desenergizada
+* Q2: 0=bateria  descargada, 1=bateria cargada
+* Q3: 0=no hay red, 1=hay red
+* Q4: 0=hay suficiente energia solar, 1= no hay
+* Q5: 0=esta en paro de emergencia, 1=no esta en paro de emergencia
 
 ![Diagrame de flujo](https://github.com/JeredyBeltran/Images/blob/main/Diagrama.png?raw=true)
