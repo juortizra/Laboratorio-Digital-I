@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<truthTable>
+  <variables>
+    <variable name="I3"/>
+    <variable name="I2"/>
+    <variable name="I1"/>
+    <variable name="I0"/>
+  </variables>
+  <results>
+    <result>
+      <name>Q0</name>
+      <values class="BoolTable">X101X101XXXXXXXX</values>
+    </result>
+    <result>
+      <name>Q1</name>
+      <values class="BoolTable">0111011100000000</values>
+    </result>
+    <result>
+      <name>Q2</name>
+      <values class="BoolTable">1100110000000000</values>
+    </result>
+    <result>
+      <name>Q3</name>
+      <values class="BoolTable">0101010100000000</values>
+    </result>
+    <result>
+      <name>Q4</name>
+      <values class="BoolTable">0000111100000000</values>
+    </result>
+    <result>
+      <name>Q5</name>
+      <values class="BoolTable">0000000011111111</values>
+    </result>
+  </results>
+</truthTable>
