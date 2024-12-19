@@ -23,5 +23,14 @@ Q4 = Indicador de suficiente radiación solar
 Q5 = Desenergización de la casa para mantenimiento
 
 ![Diagrama de Caja Negra](https://github.com/JeredyBeltran/Images/blob/main/Caja%20(2).png?raw=true)
+
+Como siguiente paso, se propone la tabla de verdad considerando todos los posibles casos, en este punto hacemos uso de la condición Don't Care y las siguientes condiciones:
+
 ![Tabla de Verdad](https://github.com/JeredyBeltran/Images/blob/main/Tabla.png?raw=true)
+*I0: 0=no hay red, 1=hay red
+*I1: 0=bateria descargada, 1=bateria cargada
+*I2: 0=no hay energía solar, 1=hay energía solar
+*I3: 0=no esta activo, 1=esta activo
+
+
 ![Diagrame de flujo](https://github.com/JeredyBeltran/Images/blob/main/Diagrama.png?raw=true)
