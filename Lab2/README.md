@@ -94,10 +94,10 @@ Para cada una de las salidas, las ecuaciones que describen su comportamiento en 
   
   <img src="./Mapa4.png" alt="mapa" width="350">
  
-* **$Q_5$** (LED Paro de emergencia) = $I_3$
+* **$Q_4$** (LED Paro de emergencia) = $I_3$
   * Mapa de Karnaugh:
   
-  <img src="./Mapa6.png" alt="mapa" width="350">
+  <img src="./Mapa5.png" alt="mapa" width="350">
 
 La siguiente figura muestra el diagrama [esquemático](./Lab2.dig) del circuito eléctrico: 
 
