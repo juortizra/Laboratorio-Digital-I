@@ -16,11 +16,9 @@ Se plantea inicilamente el comportamiento esperado por el sistema, se utiliza co
 
 * **$Q_2$** = Indicador cuando las baterías están descargadas
 
-* **$Q_3$** = Indicador de red eléctrica disponible
+* **$Q_3$** = Indicador de suficiente radiación solar
 
-* **$Q_4$** = Indicador de suficiente radiación solar
-
-* **$Q_5$** = Desenergización de la casa para mantenimiento
+* **$Q_4$** = Desenergización de la casa para mantenimiento
 
 
 ![Diagrama de Caja Negra](./Caja1.png)
