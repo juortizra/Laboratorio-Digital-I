@@ -99,7 +99,7 @@ Para cada una de las salidas, las ecuaciones que describen su comportamiento en 
   
   <img src="./Mapa5.png" alt="mapa" width="350">
 
-La siguiente figura muestra el diagrama [esquemático](./Lab2.dig) del circuito eléctrico: 
+La siguiente figura muestra el diagrama [esquemático](./Lab2Digital.dig) del circuito eléctrico: 
 
  ![circuitolab2](./CircuitoLab2.png)
 
