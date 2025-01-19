@@ -25,7 +25,7 @@ Se plantea inicilamente el comportamiento esperado por el sistema, se utiliza co
 
 Como siguiente paso, se propone la tabla de verdad considerando todos los posibles casos, en este punto hacemos uso de la condición Don't Care y de las siguientes condiciones(facilitan la construcción de la tabla de verdad dadas las definiciones de los parametros):
 
-![Tabla de Verdad](./Tabla.png)
+![Tabla de Verdad](./TablaV.png)
 
 * **$I_0$**  
   * 0 = No hay red  
