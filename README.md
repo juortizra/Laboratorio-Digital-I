@@ -11,6 +11,20 @@ Por otro lado, la solución finalmente implementada se centra en la automatizaci
 En términos de comparación, la primera solución planteada ofrece un monitoreo mas amplio al incluir múltiples sensores y permitir una regulación de distintos factores dados en los entornos del cultivo, en contraste, la solución final presenta sistemas más específicos, prácticos y optimizados para el sistema de riego automatizado, esto permite una comunicación mas eficiente y confiable con la FPGA. Además, la incorporación de la interfaz visual permite un análisis y comprensión más sencillo y efectivo de la variable utilizada.
 
 ## III. **Estructura de la Solución**
+a) *Sensores*
+
+b) *Circuito*
+
+Este circuito se planteó teniendo en cuenta los dispositivos de entrada y salida necesarios para el funcionamiento adecuado del proyecto. Estos componentes se categorizaron dependiendo de su función, y fueron ubicados en la PCB con modelos preestablecidos, o en su defecto, conectores con el mismo número de terminales. A continuación se describe cada uno de ellos. 
+
+* Alimentación y comunicación de sensores
+
+  ![Circuito de alimentación](./Alimentacion.png)
+  ![Comunicación de sensores](./Sensores.png)
+* Bomba de agua
+  
+* LEDs de salida
+
 
 ## IV. **Tamaño de la Solución**
 ## V. **Desafios**
