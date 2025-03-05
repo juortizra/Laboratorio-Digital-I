@@ -22,4 +22,8 @@ En términos de comparación, la primera solución planteada ofrece un monitoreo
 | 7      |   3/02/2025 - 7/02/2025     | Integración de todo el sistema y pruebas finales |
 | 8      |   10/02/2025 - 14/02/2025   | Presentación del documento y proyecto final
 ## VI. **Conclusiones**
+* La implementación del sistema de riego permitió la una automatización eficiente del proceso, asegurando de esta forma que la planta del cultivo reciba el agua necesaria según los niveles de humedad detectados por el sensor. Cabe resaltar que la sincronización entre el sensor y actuador fueron claves para el éxito del sistema, dado que se requirieron manejos efectivos de los datos censados.
+ 
+* La inclusión de la pantalla LCD y luces LED  mejoro la interacción con el usuario, ya que facilita la supervisión del estado del sistema, proporcionando una referencia visual sobre el funcionamiento del sistemas
+
 ## VII. **Trabajos futuros**
