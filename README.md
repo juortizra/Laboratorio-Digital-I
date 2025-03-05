@@ -4,12 +4,21 @@ Desarrollar e implementar un sistema de riego automatizado basado en electrónic
 
 ### Objetivos: Propuesta de proyecto
 
-- Diseñar y crear un sistema digital basado en una FPGA que ofrezca de manera autónoma los cuidados necesarios a un cultivo en zonas urbanas mediante actuadores, conforme a la información suministrada por sensores de humedad, temperatura, luz y nutrientes.
+- Diseñar y crear un sistema digital basado en una FPGA que ofrezca de manera autónoma los cuidados necesarios para un cultivo en zonas urbanas mediante actuadores, conforme a la información suministrada por sensores de humedad, temperatura, luz y nutrientes.
+  - El objetivo se cumplió parcialmente. Se implementó el sensor de humedad de suelo para la medición del porcentaje de humedad en la tierra del cultivo. La comunicación de los datos se realiza por medio de I2C, y se procesa en la FPGA para su interpretación, y posterior visualización en una pantalla LCD. Así mismo, la información suministrada por los sensores de temperatura y luz fue leída utilizando el mismo protocolo mencionado; sin embargo, no se implementó en la versión final el código inicial para configurarlos correctamente. No hay sensor de nutrientes. 
 - Utilizar lenguajes de programación de hardware como lo pueden ser VHDL/Verilog para integrar la lógica digital que va a controlar los procesos autónomos en el sistema para el cuidado del cultivo.
+  - El objetivo se cumplió completamente. La programación utilizada para el correcto funcionamiento del proyecto utiliza lenguaje Verilog para:
+    - Implementación de protocolo I2C y lectura de los sensores. 
+    - Análisis, procesamiento y alamacenamiento de la información leída.
+    - Control de los actuadores en función de los datos entregados por el sensor. 
 - Diseñar algoritmos de control que minimicen el desperdicio de agua, fertilizantes, energía eléctrica, componentes, etc; para disminuir los costos de producción agraria, los costos de la implementación del sistema y agilizar procesos.
+  - No se implementó ningún algoritmo mencionado en el objetivo. Sin embargo, el sistema automatizado de riego automático sí agiliza procesos en el cultivo de plantas. 
 - Validar y calibrar los sensores y actuadores para garantizar mediciones precisas.
-- Favorecer la versatilidad del sistema en diferentes espacios urbanos, como lo pueden ser balcones, patios, jardines, etc.
+  - Sí se cumplió el objetivo. El sensor de humedad de suelo fue validado inicialmente en otro dispositivo para comprobar su funcionamiento. Posteriormente, se implementó en la FPGA, y se calibró el porcentaje de humedad percibido con el fin de controlar los actuadores en función de los datos recopilados. 
+- Favorecer la versatilidad del sistema en diferentes espacios urbanos, como lo pueden ser balcones, patios, jardines, etc. 
+  - Sí se cumplió el objetivo. El proyecto puede movilizarse sin mayor complejidad, lo que facilita su portabilidad y ubicación en cualquier espacio que garantice la protección contra humedad en la caja de circuitos. 
 - Probar el funcionamiento del sistema con un tipo de cultivo específico que se pueda sembrar en la ciudad de Bogotá, caracterizando e implementando en el sistema las condiciones para que dicho cultivo crezca de la manera más eficiente y sana.
+  - Sí se cummplió el objetivo. Este sistema de monitoreo se implementó correctamente en una planta de tomate; cuyas condiciones de cultivo se ajustan a Bogotá. 
 
 
 
@@ -23,7 +32,7 @@ Por otro lado, la solución finalmente implementada se centra en la automatizaci
 En términos de comparación, la primera solución planteada ofrece un monitoreo mas amplio al incluir múltiples sensores y permitir una regulación de distintos factores dados en los entornos del cultivo, en contraste, la solución final presenta sistemas más específicos, prácticos y optimizados para el sistema de riego automatizado, esto permite una comunicación mas eficiente y confiable con la FPGA. Además, la incorporación de la interfaz visual permite un análisis y comprensión más sencillo y efectivo de la variable utilizada.
 
 ## III. **Estructura de la Solución**
-a) *Sensores*
+* Sensores
 Para la comunicación de los sensores con la FPGA se apreció que la mejor opción era usar el protocolo I2C, pues dicho protocolo nos permite comunicar varios dispositivos esclavos (en este caso sensores) a un maestro (en este caso la FPGA) con solo dos buses, SCL (línea de reloj en serie) y SDA (línea de datos en serie), lo cual optimiza el espacio a la hora de diseñar nuestra PCB y permite que haya menos presencia de cables en nuestro diseño lo que nos facilita la implementación física del sistema.
 Basándose en la lógica planteada por el manual I2C de NXP Semiconductors [2]:
 
