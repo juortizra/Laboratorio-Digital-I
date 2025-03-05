@@ -21,9 +21,12 @@ En términos de comparación, la primera solución planteada ofrece un monitoreo
 | 6      |   27/01/2025 - 31/01/2025   | Configuración de actuadores               |
 | 7      |   3/02/2025 - 7/02/2025     | Integración de todo el sistema y pruebas finales |
 | 8      |   10/02/2025 - 14/02/2025   | Presentación del documento y proyecto final
+
 ## VI. **Conclusiones**
 * La implementación del sistema de riego permitió la una automatización eficiente del proceso, asegurando de esta forma que la planta del cultivo reciba el agua necesaria según los niveles de humedad detectados por el sensor. Cabe resaltar que la sincronización entre el sensor y actuador fueron claves para el éxito del sistema, dado que se requirieron manejos efectivos de los datos censados.
  
 * La inclusión de la pantalla LCD y luces LED  mejoro la interacción con el usuario, ya que facilita la supervisión del estado del sistema, proporcionando una referencia visual sobre el funcionamiento del sistemas
 
 ## VII. **Trabajos futuros**
+Como parte de los trabajos futuros en el proyecto se plantea la inclusión de más sensores ambientales que  permitan un monitoreo mas completo de las variables que repercuten en el crecimiento de la planta, se contemplan sensores como los de temperatura, luz y niveles de nutrientes.
+De igual se explorará la posibilidad de mejorar la comunicación entre los sensores y la FPGA, para una mejor eficiencia en la transmisión de datos, y mayor precisión en rangos de activación de los actuadores implementados.
