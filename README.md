@@ -11,17 +11,20 @@ Por otro lado, la solución finalmente implementada se centra en la automatizaci
 En términos de comparación, la primera solución planteada ofrece un monitoreo mas amplio al incluir múltiples sensores y permitir una regulación de distintos factores dados en los entornos del cultivo, en contraste, la solución final presenta sistemas más específicos, prácticos y optimizados para el sistema de riego automatizado, esto permite una comunicación mas eficiente y confiable con la FPGA. Además, la incorporación de la interfaz visual permite un análisis y comprensión más sencillo y efectivo de la variable utilizada.
 
 ## III. **Estructura de la Solución**
+
 ## IV. **Tamaño de la Solución**
 ## V. **Desafios**
 | Semana | Fechas                  | Actividad Principal                         |
 |--------|-------------------------|---------------------------------------------|
 | 1      |   2/12/2024 - 6/12/2024     | Investigación y planeación de componentes |
-| 2      |   9/12/2024 - 20/12/2024    | Configuración de sensores                 |
-| 3      |   9/12/2024 - 20/12/2024    | Implementación de conversor ADC           |
+| 2      |   9/12/2024 - 13/12/2024    | Configuración de sensores                 |
+| 3      |   16/12/2024 - 20/12/2024    | Implementación de conversor ADC           |
 | 4 - 5  |   13/01/2025 - 24/01/2025   | Programación y recopilación de datos en la FPGA |
 | 6      |   27/01/2025 - 31/01/2025   | Configuración de actuadores               |
 | 7      |   3/02/2025 - 7/02/2025     | Integración de todo el sistema y pruebas finales |
 | 8      |   10/02/2025 - 14/02/2025   | Presentación del documento y proyecto final |
+
+
 
 ## VI. **Conclusiones**
 * La implementación del sistema de riego permitió la una automatización eficiente del proceso, asegurando de esta forma que la planta del cultivo reciba el agua necesaria según los niveles de humedad detectados por el sensor. Cabe resaltar que la sincronización entre el sensor y actuador fueron claves para el éxito del sistema, dado que se requirieron manejos efectivos de los datos censados.
