@@ -38,16 +38,32 @@ Este circuito se planteó teniendo en cuenta los dispositivos de entrada y salid
   El conector "Source" es la entrada de 5V que alimenta todo el proyecto. A sus terminales están conectados todos los dispositivos que requieren una alimentación constante, como los sensores, display, la bomba de agua y la FPGA.
 Por otro lado, cada sensor cuenta con dos terminales de conexión que se unen en común a las salidas SCL y SND para la comunicación de cada dispositivo de entrada con la FPGA. 
 
-* Bomba de agua
-  ![Circuito de bomba de agua](./)
-  
 * LEDs de salida
 
 ![Circuito de LEDs](./Leds.png)
 
-Cada LED se encuentra conectado a una de las salidas de la FPGA para ser activado dependiendo de su función. Los primeros dos LEDs se utilizan como medida de alerta, indicando que las variables asociadas (temperatura y humedad) no se encuentran en el rango adecuado de operación. El tercer LED se activará cuando el dispositivo esté encendido, y por último, el cuarto representará un nivel de agua bajo en el tanque de la mini bomba. 
-Finalmente, la integración de todos los componentes se observa en la siguiente figura. Este diseño no es definitivo, y aún requiere algunas modificaciones. 
 
+* Bomba de agua
+
+La bomba de agua se encuentra conectada a un módulo Relé que se activa cuando el sensor de humedad del suelo detecta un porcentaje de humedad mayor a lo establecido en el programa. Este relé conecta la minibomba a tierra. 
+
+  ![Circuito de bomba de agua](./motor.png)
+  
+
+Cada LED se encuentra conectado a una de las salidas de la FPGA para ser activado dependiendo de su función. Los primeros dos LEDs se utilizan como medida de alerta, indicando que las variables asociadas (temperatura y humedad) no se encuentran en el rango adecuado de operación. El tercer LED se activará cuando el dispositivo esté encendido, y el cuarto indicará que la minibomba está encendida.
+
+* Botón de Reset
+
+La PCB cuenta un arreglo de resisetencias y un pulsador para simular un pulso de 5V en caso de que se necesite realizar un RESET en la FPGA. La siguiente figura muestra el diagrama esquemático de la conexión. 
+
+![Boton RESET](./pulsador.png)
+
+* Pantalla LCD
+
+En circuito esquemático se encuentra conectada la pantlla LCD con sus respectivos pines de alimentación (5V y G) y comunicación (SCL y SDA). 
+
+![Boton RESET](./LCD.png)
+    
 
 ## IV. **Desafios**
 | Semana | Fechas                  | Actividad Principal                         |
