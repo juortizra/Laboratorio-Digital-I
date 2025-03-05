@@ -1,6 +1,7 @@
 # Sistema de riego para cultivos de tomate
 ## I. **Objetivo**
 Desarrollar e implementar un sistema de riego automatizado basado en electrónica digital que emplee sensores de humedad para determinar el nivel de riego necesario, una FPGA para el procesamiento y toma de decisiones, y actuadores como mini bombas para la distribución del agua; con la finalidad de obtener un monitoreo y control eficiente de cultivos de tomate, optimizando el uso del agua y asegurando condiciones óptimas para el crecimiento de las plantas. 
+
 ## II. **Solución**
 Como solución se desarrolló un sistema de riego automatizado basado en una FPGA, que implemente el protocolo de comunicación I2C para la lectura de un sensor digital de humedad del suelo, para facilitar el monitoreo, optimización y activación en el riego de una planta de tomate por medio de una mini bomba de agua. Se integro una pantalla LCD para la visualización de datos, y luces Led indicando el funcionamiento del dispositivo.
 
@@ -14,6 +15,7 @@ En términos de comparación, la primera solución planteada ofrece un monitoreo
 a) *Sensores*
 Para la comunicación de los sensores con la FPGA se apreció que la mejor opción era usar el protocolo I2C, pues dicho protocolo nos permite comunicar varios dispositivos esclavos (en este caso sensores) a un maestro (en este caso la FPGA) con solo dos buses, SCL (línea de reloj en serie) y SDA (línea de datos en serie), lo cual optimiza el espacio a la hora de diseñar nuestra PCB y permite que haya menos presencia de cables en nuestro diseño lo que nos facilita la implementación física del sistema.
 Basándose en la lógica planteada por el manual I2C de NXP Semiconductors [2]:
+
 ![Logica](./sensores1.png)
 
 Se construyó la siguiente arquitectura donde el módulo master I2C, controlador y divisor de frecuencia son implementaciones descritas en verilog que se sintetizan en la FPGA. La función de cada módulo es la siguiente :
@@ -47,8 +49,7 @@ Cada LED se encuentra conectado a una de las salidas de la FPGA para ser activad
 Finalmente, la integración de todos los componentes se observa en la siguiente figura. Este diseño no es definitivo, y aún requiere algunas modificaciones. 
 
 
-## IV. **Tamaño de la Solución**
-## V. **Desafios**
+## IV. **Desafios**
 | Semana | Fechas                  | Actividad Principal                         |
 |--------|-------------------------|---------------------------------------------|
 | 1      |   2/12/2024 - 6/12/2024     | Investigación y planeación de componentes |
@@ -70,11 +71,11 @@ El cronograma inicial planteado en la propuesta sugiere un trabajo distribuido e
 
 La implementación de los actuadores tuvieron retraso de una semana; no obstante, gran parte de lo planeado hasta ese momento ya se encontraba realizado.
 
-## VI. **Conclusiones**
+## V. **Conclusiones**
 * La implementación del sistema de riego permitió la una automatización eficiente del proceso, asegurando de esta forma que la planta del cultivo reciba el agua necesaria según los niveles de humedad detectados por el sensor. Cabe resaltar que la sincronización entre el sensor y actuador fueron claves para el éxito del sistema, dado que se requirieron manejos efectivos de los datos censados.
  
 * La inclusión de la pantalla LCD y luces LED  mejoro la interacción con el usuario, ya que facilita la supervisión del estado del sistema, proporcionando una referencia visual sobre el funcionamiento del sistemas
 
-## VII. **Trabajos futuros**
+## VI. **Trabajos futuros**
 Como parte de los trabajos futuros en el proyecto se plantea la inclusión de más sensores ambientales que  permitan un monitoreo mas completo de las variables que repercuten en el crecimiento de la planta, se contemplan sensores como los de temperatura, luz y niveles de nutrientes.
 De igual se explorará la posibilidad de mejorar la comunicación entre los sensores y la FPGA, para una mejor eficiencia en la transmisión de datos, y mayor precisión en rangos de activación de los actuadores implementados.
