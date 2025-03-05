@@ -49,6 +49,15 @@ Finalmente, la integración de todos los componentes se observa en la siguiente 
 | 8      |   10/02/2025 - 14/02/2025   | Presentación del documento y proyecto final |
 
 
+En cuanto a las actividades de “ Investigación y planeación de componentes”, ” configuración de sensores” se tuvo un desempeño satisfactorio pues se cumplieron el 100% de los objetivos en las fechas propuestas, lo que supuso un buen comienzo. 
+
+En cuanto a las actividades de “Implementación de conversor ADC”, “Programación y recopilación de datos en la FPGA” hubieron cambios, pues en un principio se pensó en comunicar los sensores con la FPGA con conversores ADC, lo cual se descartó al ver como mejor opción para esta tarea el protocolo I2C, ese cambio más el hecho de que el protocolo I2C conllevaba una densa investigación que no estaba apreciada dentro del calendario, causó un retraso en nuestro proyecto de una semana en primer lugar.
+
+Luego, hubo dificultades al intentar describir el comportamiento  en verilog del protocolo I2C para lograr la comunicación entre la FPGA y los sensores, lo cual supuso una semana más de atraso,  sin embargo, en la semana siguiente de trabajo se pudieron solucionar muchas dificultades y darle más claridad al diseño, dejándonos con un avance del 80% en estas dos actividades, faltandonos la prueba del código implementando ya los actuadores.
+
+El cronograma inicial planteado en la propuesta sugiere un trabajo distribuido en 8 semanas, dónde cada elemento se ejecutaba de manera independiente y única; sin embargo, para mejorar la distribución, se llevó a cabo un trabajo en paralelo dónde la “Configuración de actuadores”, y “Programación y recopilación de datos en la FPGA” se realizó simultáneamente con tareas divididas entre los miembros del equipo de trabajo. Esta forma de organización permitió alinear el avance del proyecto con el cronograma propuesto en un principio.
+
+La implementación de los actuadores tuvieron retraso de una semana; no obstante, gran parte de lo planeado hasta ese momento ya se encontraba realizado.
 
 ## VI. **Conclusiones**
 * La implementación del sistema de riego permitió la una automatización eficiente del proceso, asegurando de esta forma que la planta del cultivo reciba el agua necesaria según los niveles de humedad detectados por el sensor. Cabe resaltar que la sincronización entre el sensor y actuador fueron claves para el éxito del sistema, dado que se requirieron manejos efectivos de los datos censados.
