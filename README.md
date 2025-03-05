@@ -21,10 +21,15 @@ Este circuito se planteó teniendo en cuenta los dispositivos de entrada y salid
 
   ![Circuito de alimentación](./Alimentacion.png)
   ![Comunicación de sensores](./Sensores.png)
+
+  El conector "Source" es la entrada de 5V que alimenta todo el proyecto. A sus terminales están conectados todos los dispositivos que requieren una alimentación constante, como los sensores, decodificadores, display, la bomba de agua y la FPGA.
+Por otro lado, cada sensor cuenta con dos terminales de conexión que se unen en común a las salidas SCL y SND para la comunicación de cada dispositivo de entrada con la FPGA. 
+
 * Bomba de agua
+  ![Circuito de bomba de agua](./)
   
 * LEDs de salida
-
+![Circuito de LEDs](./Leds.png)
 
 ## IV. **Tamaño de la Solución**
 ## V. **Desafios**
