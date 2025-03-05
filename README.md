@@ -4,12 +4,12 @@ Desarrollar e implementar un sistema de riego automatizado basado en electrónic
 
 ### Objetivos: Propuesta de proyecto
 
-### Diseñar y crear un sistema digital basado en una FPGA que ofrezca de manera autónoma los cuidados necesarios a un cultivo en zonas urbanas mediante actuadores, conforme a la información suministrada por sensores de humedad, temperatura, luz y nutrientes.
-### Utilizar lenguajes de programación de hardware como lo pueden ser VHDL/Verilog para integrar la lógica digital que va a controlar los procesos autónomos en el sistema para el cuidado del cultivo.
-### Diseñar algoritmos de control que minimicen el desperdicio de agua, fertilizantes, energía eléctrica, componentes, etc; para disminuir los costos de producción agraria, los costos de la implementación del sistema y agilizar procesos.
-####Validar y calibrar los sensores y actuadores para garantizar mediciones precisas.
-***Favorecer la versatilidad del sistema en diferentes espacios urbanos, como lo pueden ser balcones, patios, jardines, etc.
-#### Probar el funcionamiento del sistema con un tipo de cultivo específico que se pueda sembrar en la ciudad de Bogotá, caracterizando e implementando en el sistema las condiciones para que dicho cultivo crezca de la manera más eficiente y sana.
+- Diseñar y crear un sistema digital basado en una FPGA que ofrezca de manera autónoma los cuidados necesarios a un cultivo en zonas urbanas mediante actuadores, conforme a la información suministrada por sensores de humedad, temperatura, luz y nutrientes.
+- Utilizar lenguajes de programación de hardware como lo pueden ser VHDL/Verilog para integrar la lógica digital que va a controlar los procesos autónomos en el sistema para el cuidado del cultivo.
+- Diseñar algoritmos de control que minimicen el desperdicio de agua, fertilizantes, energía eléctrica, componentes, etc; para disminuir los costos de producción agraria, los costos de la implementación del sistema y agilizar procesos.
+- Validar y calibrar los sensores y actuadores para garantizar mediciones precisas.
+- Favorecer la versatilidad del sistema en diferentes espacios urbanos, como lo pueden ser balcones, patios, jardines, etc.
+- Probar el funcionamiento del sistema con un tipo de cultivo específico que se pueda sembrar en la ciudad de Bogotá, caracterizando e implementando en el sistema las condiciones para que dicho cultivo crezca de la manera más eficiente y sana.
 
 
 
