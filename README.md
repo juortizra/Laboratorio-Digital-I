@@ -29,7 +29,12 @@ Por otro lado, cada sensor cuenta con dos terminales de conexión que se unen en
   ![Circuito de bomba de agua](./)
   
 * LEDs de salida
+
 ![Circuito de LEDs](./Leds.png)
+
+Cada LED se encuentra conectado a una de las salidas de la FPGA para ser activado dependiendo de su función. Los primeros dos LEDs se utilizan como medida de alerta, indicando que las variables asociadas (temperatura y humedad) no se encuentran en el rango adecuado de operación. El tercer LED se activará cuando el dispositivo esté encendido, y por último, el cuarto representará un nivel de agua bajo en el tanque de la mini bomba. 
+Finalmente, la integración de todos los componentes se observa en la siguiente figura. Este diseño no es definitivo, y aún requiere algunas modificaciones. 
+
 
 ## IV. **Tamaño de la Solución**
 ## V. **Desafios**
