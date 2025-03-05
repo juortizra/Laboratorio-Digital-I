@@ -36,7 +36,7 @@ En términos de comparación, la primera solución planteada ofrece un monitoreo
 Para la comunicación de los sensores con la FPGA se apreció que la mejor opción era usar el protocolo I2C, pues dicho protocolo nos permite comunicar varios dispositivos esclavos (en este caso sensores) a un maestro (en este caso la FPGA) con solo dos buses, SCL (línea de reloj en serie) y SDA (línea de datos en serie), lo cual optimiza el espacio a la hora de diseñar nuestra PCB y permite que haya menos presencia de cables en nuestro diseño lo que nos facilita la implementación física del sistema.
 Basándose en la lógica planteada por el manual I2C de NXP Semiconductors [2]:
 
-![Logica](./Logica_pro.png)
+![Logic](./Logica_pro.png)
 
 Se construyó la siguiente arquitectura donde el módulo master I2C, controlador y divisor de frecuencia son implementaciones descritas en verilog que se sintetizan en la FPGA. La función de cada módulo es la siguiente :
 
