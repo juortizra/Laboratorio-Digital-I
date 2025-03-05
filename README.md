@@ -16,7 +16,7 @@ a) *Sensores*
 Para la comunicación de los sensores con la FPGA se apreció que la mejor opción era usar el protocolo I2C, pues dicho protocolo nos permite comunicar varios dispositivos esclavos (en este caso sensores) a un maestro (en este caso la FPGA) con solo dos buses, SCL (línea de reloj en serie) y SDA (línea de datos en serie), lo cual optimiza el espacio a la hora de diseñar nuestra PCB y permite que haya menos presencia de cables en nuestro diseño lo que nos facilita la implementación física del sistema.
 Basándose en la lógica planteada por el manual I2C de NXP Semiconductors [2]:
 
-![Logica](./sensores1.png)
+![Logica](./Sensores1.png)
 
 Se construyó la siguiente arquitectura donde el módulo master I2C, controlador y divisor de frecuencia son implementaciones descritas en verilog que se sintetizan en la FPGA. La función de cada módulo es la siguiente :
 
@@ -28,14 +28,14 @@ Se construyó la siguiente arquitectura donde el módulo master I2C, controlador
 
 b) *Circuito*
 
-Este circuito se planteó teniendo en cuenta los dispositivos de entrada y salida necesarios para el funcionamiento adecuado del proyecto. Estos componentes se categorizaron dependiendo de su función, y fueron ubicados en la PCB con modelos preestablecidos, o en su defecto, conectores con el mismo número de terminales. A continuación se describe cada uno de ellos. 
+Este circuito se planteó teniendo en cuenta los dispositivos de entrada y salida necesarios para el funcionamiento adecuado del proyecto. Estos componentes se categorizaron dependiendo de su función, y fueron ubicados en el esquemático con modelos preestablecidos, o en su defecto, conectores con el mismo número de terminales. A continuación se describe cada uno de ellos. 
 
 * Alimentación y comunicación de sensores
 
   ![Circuito de alimentación](./Alimentacion.png)
   ![Comunicación de sensores](./Sensores.png)
 
-  El conector "Source" es la entrada de 5V que alimenta todo el proyecto. A sus terminales están conectados todos los dispositivos que requieren una alimentación constante, como los sensores, decodificadores, display, la bomba de agua y la FPGA.
+  El conector "Source" es la entrada de 5V que alimenta todo el proyecto. A sus terminales están conectados todos los dispositivos que requieren una alimentación constante, como los sensores, display, la bomba de agua y la FPGA.
 Por otro lado, cada sensor cuenta con dos terminales de conexión que se unen en común a las salidas SCL y SND para la comunicación de cada dispositivo de entrada con la FPGA. 
 
 * Bomba de agua
