@@ -8,12 +8,12 @@ Desarrollar e implementar un sistema de riego automatizado basado en una FPGA, q
 ## V. **Desafios**
 | Semana | Fechas              | Actividad Principal                         |
 |--------|---------------------|--------------------------------------------|
-| 1      | 2/12/2024 - 6/12/2024  | Investigación y planeación de componentes |
-| 2 - 3  | 9/12/2024 - 20/12/2024 | Configuración de sensores                 |
-| 4 - 5  | 13/01/2025 - 24/01/2025 | Programación y recopilación de datos en la FPGA |
-| 6      | 27/01/2025 - 31/01/2025 | Configuración de actuadores               |
-| 7      | 3/02/2025 - 7/02/2025   | Integración de todo el sistema y pruebas finales |
-| 8      | 10/02/2025 - 14/02/2025 | Presentación del documento y proyecto final |
+| 1      |   2/12/2024 - 6/12/2024     | Investigación y planeación de componentes |
+| 2 - 3  |   9/12/2024 - 20/12/2024    | Configuración de sensores                 |
+| 4 - 5  |   13/01/2025 - 24/01/2025   | Programación y recopilación de datos en la FPGA |
+| 6      |   27/01/2025 - 31/01/2025   | Configuración de actuadores               |
+| 7      |   3/02/2025 - 7/02/2025     | Integración de todo el sistema y pruebas finales |
+| 8      |   10/02/2025 - 14/02/2025   | Presentación del documento y proyecto final |
 
 ## VI. **Conclusiones**
 ## VII. **Trabajos futuros**
