@@ -12,6 +12,17 @@ En términos de comparación, la primera solución planteada ofrece un monitoreo
 
 ## III. **Estructura de la Solución**
 a) *Sensores*
+Para la comunicación de los sensores con la FPGA se apreció que la mejor opción era usar el protocolo I2C, pues dicho protocolo nos permite comunicar varios dispositivos esclavos (en este caso sensores) a un maestro (en este caso la FPGA) con solo dos buses, SCL (línea de reloj en serie) y SDA (línea de datos en serie), lo cual optimiza el espacio a la hora de diseñar nuestra PCB y permite que haya menos presencia de cables en nuestro diseño lo que nos facilita la implementación física del sistema.
+Basándose en la lógica planteada por el manual I2C de NXP Semiconductors [2]:
+![Logica](./Alimentacion.png)
+
+Se construyó la siguiente arquitectura donde el módulo master I2C, controlador y divisor de frecuencia son implementaciones descritas en verilog que se sintetizan en la FPGA. La función de cada módulo es la siguiente :
+
+* Módulo master I2C: Su función es incorporar la lógica planteada por el manual I2C mediante una máquina de 9 estados: IDLE, START, ADDR, READ, WRITE, ACK1, DATA, ACK2, STOP; dicha máquina nos permite implementar el bus SDA. También es la encargada de generar el bus SCL y la interacción entre este bus y el bus SDA. 
+
+* Controlador: Su función es cambiar el valor ADDR para que el módulo I2C master lea la información de cada sensor; envía la señal START para iniciar la máquina de estados del módulo I2C master; envía la orden de si la FPGA va a escribir un valor o a leer un valor, es la que maneja los valores censados e implementa la lógica que van a seguir los actuadores y por último es la que envía el valor a escribir en dado caso que se quiera transmitir información. 
+
+* Divisor de frecuencia: Se encarga de convertir la frecuencia del clock de la FPGA, en este caso 25 MHz, a la frecuencia de operación del protocolo I2C, que en este caso es de 100KHz para el modo estándar de velocidad de operación.
 
 b) *Circuito*
 
@@ -51,7 +62,7 @@ Finalmente, la integración de todos los componentes se observa en la siguiente 
 
 En cuanto a las actividades de “ Investigación y planeación de componentes”, ” configuración de sensores” se tuvo un desempeño satisfactorio pues se cumplieron el 100% de los objetivos en las fechas propuestas, lo que supuso un buen comienzo. 
 
-En cuanto a las actividades de “Implementación de conversor ADC”, “Programación y recopilación de datos en la FPGA” hubieron cambios, pues en un principio se pensó en comunicar los sensores con la FPGA con conversores ADC, lo cual se descartó al ver como mejor opción para esta tarea el protocolo I2C, ese cambio más el hecho de que el protocolo I2C conllevaba una densa investigación que no estaba apreciada dentro del calendario, causó un retraso en nuestro proyecto de una semana en primer lugar.
+Por su parte las actividades de “Implementación de conversor ADC”, “Programación y recopilación de datos en la FPGA” hubieron cambios, pues en un principio se pensó en comunicar los sensores con la FPGA con conversores ADC, lo cual se descartó al ver como mejor opción para esta tarea el protocolo I2C, ese cambio más el hecho de que el protocolo I2C conllevaba una densa investigación que no estaba apreciada dentro del calendario, causó un retraso en nuestro proyecto de una semana en primer lugar.
 
 Luego, hubo dificultades al intentar describir el comportamiento  en verilog del protocolo I2C para lograr la comunicación entre la FPGA y los sensores, lo cual supuso una semana más de atraso,  sin embargo, en la semana siguiente de trabajo se pudieron solucionar muchas dificultades y darle más claridad al diseño, dejándonos con un avance del 80% en estas dos actividades, faltandonos la prueba del código implementando ya los actuadores.
 
