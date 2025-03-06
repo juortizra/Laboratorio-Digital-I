@@ -33,3 +33,20 @@ A continuación, se muestra una tabla con las principales diferencias técnicas:
 
 
 ## Parte 2: 
+
+
+
+
+### Comparación de Datos Experimentales Vs. Teóricos
+
+| Parámetro                      | Experimental (TTL)  | Teórico (TTL)   | Diferencia           | Experimental (CMOS) | Teórico (CMOS)      | Diferencia         |
+|--------------------------------|---------------------|-----------------|----------------------|---------------------|---------------------|--------------------|
+| tPLH (Low → High)              | 13 ns              | 10 - 20 ns      | Dentro del rango     | 100 ns              | 50 - 200 ns         | Dentro del rango   |
+| tPHL (High → Low)              | 19 ns              | 10 - 20 ns      | Dentro del rango     | 120 ns              | 50 - 200 ns         | Dentro del rango   |
+| tr (Tiempo de subida)          | 22.8 ns            | < 25 ns         | Dentro del rango     | 5.36 µs             | 100 ns - µs         | En el rango alto   |
+| tf (Tiempo de bajada)          | 26 ns              | < 25 ns         | Ligeramente alto     | 6.48 µs             | 100 ns - µs         | En el rango alto   |
+| Tiempo de propagación (out)    | 49 ns (TPLH) 39 ns (TPHL) | No especificado | N/A                  | 780 ns (TPLH) 940 ns (TPHL) | No especificado | N/A                |
+| talm (Tiempo de alineación)    | 12 ns              | No disponible   | N/A                  | 840 ns              | No disponible       | N/A                |
+| VIL (Voltaje Bajo de Entrada)  | 2.08 V             | 0.8 V           | Mayor de lo esperado | 1.67 V              | 1/3 VDD (≈1.67 V a 5V) | Dentro del rango   |
+| VIH (Voltaje Alto de Entrada)  | 3.47 V             | 2 V             | Mayor de lo esperado | 2.72 V              | 2/3 VDD (≈3.33 V a 5V) | Lig. menor         |
+
