@@ -16,7 +16,20 @@ A continuación, se muestra una tabla con las principales diferencias técnicas:
 
 
 ## Parte 2: Circuitos equivalentes de cada negador en TTL y CMOS
+ - TTL
 
 ![TTL](./TTL.png)
 
+- CMOS
 ![TTL](./CMOS.png)
+
+## Señal cuadrada para medir tensión
+
+
+## Parte 2: 
+1. Determinar el fan-in y fan-out de cada uno de los dispositivos.
+2. Determinar la disipación de potencia.
+3. Proponer e implementar un circuito de entrada y de salida para cada uno de los dispositivos teniendo en cuenta los parámetros de cada tecnología para observar el comportamiento del mismo.
+
+
+## Parte 2: 
