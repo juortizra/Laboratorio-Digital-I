@@ -13,3 +13,10 @@ A continuación, se muestra una tabla con las principales diferencias técnicas:
 | **Margen de ruido**                    | Menor margen de ruido                                   | Mayor inmunidad al ruido                               |
 | **Capacidad de corriente de salida**   | Puede hundir hasta 8 mA y suministrar 0.4 mA              | Puede hundir o suministrar hasta 4 mA                  |
 | **Rango de temperatura de operación**  | 0°C a 70°C                                              | -55°C a 125°C                                          |
+
+
+## Parte 2: Circuitos equivalentes de cada negador en TTL y CMOS
+
+![TTL](./TTL.png)
+
+![TTL](./CMOS.png)
