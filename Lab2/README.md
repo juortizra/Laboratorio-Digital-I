@@ -113,6 +113,10 @@ Utilizando la herramienta de simulación online plcsimulator, se llevó a cabo l
  ## **4. Descripción en lenguaje HDL**
  ## **5. Síntesis en FPGA**
  ## **6. Conclusiones** 
- 
+
+* Se logró estructurar el sistema a través de un modelo de caja negra, donde se identificaron claramente las entradas y salidas, permitiendo una mejor comprensión de la función de cada componente.
+* Se estableció una lógica de control eficiente para la conmutación entre la red eléctrica, baterías y energía solar, asegurando que la casa siempre cuente con una fuente de energía disponible.
+* Se redujo la complejidad del hardware sin afectar la funcionalidad, garantizando una implementación más eficiente.
+* Se incorporaron indicadores visuales para el estado de las baterías y la energía solar, facilitando el monitoreo del sistema
 
 
