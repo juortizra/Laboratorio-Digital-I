@@ -29,5 +29,6 @@
 * Visualización de datos: Display de 7 segmentos
   
 ## 2) Diagrama de flujo 
+![Representacion del comportamiento](./Diagrama de.png)
 
 
