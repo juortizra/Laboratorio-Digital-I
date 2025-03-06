@@ -118,5 +118,5 @@ Utilizando la herramienta de simulación online plcsimulator, se llevó a cabo l
 * Se estableció una lógica de control eficiente para la conmutación entre la red eléctrica, baterías y energía solar, asegurando que la casa siempre cuente con una fuente de energía disponible.
 * Se redujo la complejidad del hardware sin afectar la funcionalidad, garantizando una implementación más eficiente.
 * Se incorporaron indicadores visuales para el estado de las baterías y la energía solar, facilitando el monitoreo del sistema
-
+* Se logró una correcta separación de las líneas de alimentación y control, permitiendo una mayor claridad en la programación del sistema.
 
