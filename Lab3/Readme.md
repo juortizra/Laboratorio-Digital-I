@@ -27,5 +27,7 @@
 2) Salidas
 * Señal digital: Datos generados por el ADC0808, representando la tensión pico.
 * Visualización de datos: Display de 7 segmentos
+  
+## 2) Diagrama de flujo 
 
 
