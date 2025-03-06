@@ -21,7 +21,7 @@ A continuación se muestran las gráficas obtenidas en el osciloscopio del oscil
 ![TTL](./Tiempos_TTL.png)
  - CMOS
    
-![CMOS](./Tiempo_CMOS.png)
+![CMOS](./Tiempos_CMOS.png)
 
 
 ### Comparación de Datos Experimentales Vs. Teóricos
