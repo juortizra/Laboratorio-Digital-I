@@ -1,5 +1,14 @@
 # Desarrollo de laboratorio 1
 ## Parte 1: Comparar las especificaciones técnicas de cada dispositivo
+
+### Circuitos equivalentes de cada negador en TTL y CMOS
+ - TTL
+
+![TTL](./TTL1.png)
+ - CMOS
+   
+![TTL](./CMOS1.png)
+
 # Comparación: Negador TTL 74LS04 vs Negador CMOS CD4069
 
 A continuación, se muestra una tabla con las principales diferencias técnicas:
@@ -23,6 +32,7 @@ A continuación se muestran las gráficas obtenidas en el osciloscopio del oscil
    
 ![CMOS](./Tiempos_CMOS.png)
 
+Nótese cómo los tiempos del CMOS son menores que el TTL, coincidiendo satisfactoriamente con la teoría. 
 
 ### Comparación de Datos Experimentales Vs. Teóricos
 
@@ -38,27 +48,29 @@ A continuación se muestran las gráficas obtenidas en el osciloscopio del oscil
 | VIH (Voltaje Alto de Entrada)  | 3.47 V             | 2 V             | Mayor de lo esperado | 2.72 V              | 2/3 VDD (≈3.33 V a 5V) | Lig. menor         |
 
 ## Parte 2:
-### Circuitos equivalentes de cada negador en TTL y CMOS
- - TTL
 
-![TTL](./TTL1.png)
- - CMOS
-   
-![TTL](./CMOS1.png)
+### Fan-in 
+No fue posible medirlo en el laboratorio. 
 
-## Señal cuadrada para medir tensión
+### Fan-out
+Las compuertas TTL requieren una corriente de entrada alta. En el laboratorio se obtuvo una salida de aproximadamente 7 mA máximo. Debido a la resolución del dispositivo, no se pudo realizar una medición precisa del dispositivo. Teniendo en cuenta que la corriente de entrada del dispositivo es varían entre 20 uA y 0.4 mA, se obtiene un Fan-out de 17.5.
 
-1. Determinar el fan-in y fan-out de cada uno de los dispositivos.
-2. Determinar la disipación de potencia.
-3. Proponer e implementar un circuito de entrada y de salida para cada uno de los dispositivos teniendo en cuenta los parámetros de cada tecnología para observar el comportamiento del mismo.
+Las compertas CMOS tienen una salida de aproximadamente 2 mA en estado alto. Por la resolución del multímetro, no fue posible medir la corriente de entrada del CMOS, por tanto, el Fan-out del dipositivo no se pudo determinar. Pero asumiendo que la corriente está en el orden de los nanoamperios, el Fan Out es muy grande. 
 
+### Potencia de disipación. 
+- TTL
+Asumiendo un voltaje de 5V y una corriente de consumo de 0.4mA y 20uA, se deduce que la potencia de un disipación de la compuerta oscila entre 2mW y  0.1 mW al alternar entre estado alto y bajo.
 
+- CMOS
+Asumiendo un voltaje de 5V y una corriente de salida de 2 mA, la potencia disipada es 10 mW en estado alto.  
 
 ## Parte 3: 
-1. El oscilador en anillo es un circuito compuesto por compiertas NOT que se utiliza para generar señales una señal peródica sin necesidad de componentes externos.
+El oscilador en anillo es un circuito compuesto por compiertas NOT que se utiliza para generar señales una señal peródica sin necesidad de componentes externos.
 En esencia, este oscilador se forma conectando en serie un número impar de compuertas inversoras (NOT), de modo que la saliada de la última compuerta se retroalimente a la entrada de la primera. Por el funcinamiento intrínseco de la compuerta NOT, esta empezará oscilar. Se necesita un número impar de inversores para que la señal no se estabilice, y cambie continuamente de estado. La frecuencia se determina utilizando el retardo de propagación de cada compuerta, sumándose entre sí conforme se agregan más compuertas. 
 ### Graficas de salida del anillo
-* Para CMOS
+- Oscilador con CMOS: 7MHz
 ![TTL](./CMOS.png)
-* Para TTL
+- Osclilador con TTL: 4MHz
 ![TTL](./TTL.png)
+
+**Comparación:** En ambos circuitos se muestra una forma de onda que es rectangular, y no coincide con lo planteado en las simulaciones; sin embargo, cómo es de esperarse, los tiempos de propagación de las compuertas CMOS son menores, y por tanto, la frecuencia en la que oscila el anillo es 3 MHz mayor que la TTL. 
