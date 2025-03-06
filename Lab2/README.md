@@ -113,21 +113,37 @@ Utilizando la herramienta de simulación online plcsimulator, se llevó a cabo l
  ## **4. Descripción en lenguaje HDL**
  
  module top (
-  input I3
-  input I2
-  input I1
-  input I0
-  output Q0
-  output Q1
-  output Q2
-  output Q3
-  output Q4
+  
+  input I3,
+  
+  input I2,
+  
+  input I1,
+  
+  input I0,
+  
+  output Q0,
+  
+  output Q1,
+  
+  output Q2,
+  
+  output Q3,
+  
+  output Q4,
+
 );
+
   assign Q1 = ((I0 & ~ I3) | (I1 & ~ I3));
+  
   assign Q2 = ~ I1;
+  
   assign Q0 = ~ I0;
+  
   assign Q3 = I2;
+  
   assign Q4 = I3;
+
 endmodule
 
 - El anterior codigo fue construido exportando un codio verilog del circuito creado en el software Digital; como se puede apreciar es un modulo que se basa en logica combinacional.
