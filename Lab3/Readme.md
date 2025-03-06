@@ -1,8 +1,8 @@
 # Diseño de un voltímetro de Vp (tensión pico) para una red monofásica de 120 Vrms
 ## 1) **Dominio Comportamental**
-## Requerimientos del Sistema
+### Requerimientos del Sistema
 
-### Requerimientos Funcionales
+#### Requerimientos Funcionales
 | Requerimiento                 | Descripción |
 |--------------------------------|---------------------------------------------|
 | **Medición de Tensión Pico (Vp)** | El sistema debe ser capaz de medir la tensión pico de una señal AC con un valor promedio de 120 Vrms. |
@@ -10,7 +10,7 @@
 | **Procesamiento Digital** | El sistema debe procesar la señal digital para calcular el valor de la tensión pico. |
 | **Visualización** | El valor de la tensión pico debe ser mostrado en un visualizador digital, ya sea mediante displays de 7 segmentos o enviando los datos a una terminal serial. |
 
-### Requerimientos No Funcionales
+#### Requerimientos No Funcionales
 
 | Requerimiento                 | Descripción |
 |--------------------------------|---------------------------------------------|
