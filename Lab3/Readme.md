@@ -28,7 +28,10 @@
 * Señal digital: Datos generados por el ADC0808, representando la tensión pico.
 * Visualización de datos: Display de 7 segmentos
   
-## 2) Diagrama de flujo 
-![Representacion del comportamiento](./Diagrama de.png)
+### Diagrama de flujo 
+![Representacion del comportamiento](./DiagramaLab3.png)
 
+### 
+## 2) Dominio estructural
+### Diagramas de cajas negras por módulo
 
