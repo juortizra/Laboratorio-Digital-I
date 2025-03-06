@@ -18,10 +18,10 @@ A continuación, se muestra una tabla con las principales diferencias técnicas:
 ## Parte 2: Circuitos equivalentes de cada negador en TTL y CMOS
  - TTL
 
-![TTL](./TTL.png)
+![TTL](./TTL1.png)
 
 - CMOS
-![TTL](./CMOS.png)
+![TTL](./CMOS1.png)
 
 ## Señal cuadrada para medir tensión
 
@@ -49,4 +49,8 @@ A continuación, se muestra una tabla con las principales diferencias técnicas:
 | talm (Tiempo de alineación)    | 12 ns              | No disponible   | N/A                  | 840 ns              | No disponible       | N/A                |
 | VIL (Voltaje Bajo de Entrada)  | 2.08 V             | 0.8 V           | Mayor de lo esperado | 1.67 V              | 1/3 VDD (≈1.67 V a 5V) | Dentro del rango   |
 | VIH (Voltaje Alto de Entrada)  | 3.47 V             | 2 V             | Mayor de lo esperado | 2.72 V              | 2/3 VDD (≈3.33 V a 5V) | Lig. menor         |
+
+## Parte 3: 
+1. El oscilador en anillo es un circuito compuesto por compiertas NOT que se utiliza para generar señales una señal peródica sin necesidad de componentes externos.
+En esencia, este oscilador se forma conectando en serie un número impar de compuertas inversoras (NOT), de modo que la saliada de la última compuerta se retroalimente a la entrada de la primera. Por el funcinamiento intrínseco de la compuerta NOT, esta empezará oscilar. Se necesita un número impar de inversores para que la señal no se estabilice, y cambie continuamente de estado. La frecuencia se determina utilizando el retardo de propagación de cada compuerta, sumándose entre sí conforme se agregan más compuertas. 
 
