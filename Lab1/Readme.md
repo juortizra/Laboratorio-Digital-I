@@ -31,12 +31,6 @@ A continuación, se muestra una tabla con las principales diferencias técnicas:
 2. Determinar la disipación de potencia.
 3. Proponer e implementar un circuito de entrada y de salida para cada uno de los dispositivos teniendo en cuenta los parámetros de cada tecnología para observar el comportamiento del mismo.
 
-
-## Parte 2: 
-
-
-
-
 ### Comparación de Datos Experimentales Vs. Teóricos
 
 | Parámetro                      | Experimental (TTL)  | Teórico (TTL)   | Diferencia           | Experimental (CMOS) | Teórico (CMOS)      | Diferencia         |
@@ -50,7 +44,12 @@ A continuación, se muestra una tabla con las principales diferencias técnicas:
 | VIL (Voltaje Bajo de Entrada)  | 2.08 V             | 0.8 V           | Mayor de lo esperado | 1.67 V              | 1/3 VDD (≈1.67 V a 5V) | Dentro del rango   |
 | VIH (Voltaje Alto de Entrada)  | 3.47 V             | 2 V             | Mayor de lo esperado | 2.72 V              | 2/3 VDD (≈3.33 V a 5V) | Lig. menor         |
 
+
 ## Parte 3: 
 1. El oscilador en anillo es un circuito compuesto por compiertas NOT que se utiliza para generar señales una señal peródica sin necesidad de componentes externos.
 En esencia, este oscilador se forma conectando en serie un número impar de compuertas inversoras (NOT), de modo que la saliada de la última compuerta se retroalimente a la entrada de la primera. Por el funcinamiento intrínseco de la compuerta NOT, esta empezará oscilar. Se necesita un número impar de inversores para que la señal no se estabilice, y cambie continuamente de estado. La frecuencia se determina utilizando el retardo de propagación de cada compuerta, sumándose entre sí conforme se agregan más compuertas. 
-
+### Graficas de salida del anillo
+* Para CMOS
+![TTL](./CMOS.png)
+* Para TTL
+![TTL](./TTL.png)
