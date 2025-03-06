@@ -19,3 +19,13 @@
 | **Seguridad** |  El sistema debe tener una precisión adecuada, considerando las pérdidas en el circuito analógico de acople. |
 | **Facilidad de uso** | La interfaz de visualización debe ser clara y fácil de interpretar. |
 
+### Entradas y salidas
+1) Entradas 
+* Señal analógica: Voltaje de la red eléctrica (120 Vrms)
+* Clock: Necesario para el numero de veces que se actualiza el dato y frecuencia de muestreo del dispositivo
+
+2) Salidas
+* Señal digital: Datos generados por el ADC0808, representando la tensión pico.
+* Visualización de datos: Display de 7 segmentos
+
+
