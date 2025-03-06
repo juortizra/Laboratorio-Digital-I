@@ -31,7 +31,13 @@
 ### Diagrama de flujo 
 ![Representacion del comportamiento](./DiagramaLab3.png)
 
-### 
+## 2) Dominio Estructural
+### Diagrama de caja negra
+![Diagrama](./CajaNegra.png)
+
+### Diseño de cada módulo en compuertas
+
+
 ## 2) Dominio estructural
 ### Diagramas de cajas negras por módulo
 
