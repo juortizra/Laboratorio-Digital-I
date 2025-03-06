@@ -132,12 +132,12 @@ endmodule
 
 - El anterior codigo fue construido exportando un codio verilog del circuito creado en el software Digital; como se puede apreciar es un modulo que se basa en logica combinacional.
   
-####Localizacion de pines
-# LOCATE COMP "clk" SITE "P6";
-# IOBUF PORT "clk" IO_TYPE=LVCMOS33;
-# FREQUENCY PORT "clk" 25 MHZ;
+#### Localizacion de pines
+LOCATE COMP "clk" SITE "P6";
+IOBUF PORT "clk" IO_TYPE=LVCMOS33;
+FREQUENCY PORT "clk" 25 MHZ;
 
-# LOCATE COMP "a" SITE "M13"; # V7.1
+LOCATE COMP "a" SITE "M13"; # V7.1
 
 LOCATE COMP "I0" SITE "C4";
 IOBUF PORT "I0" IO_TYPE=LVCMOS33;
