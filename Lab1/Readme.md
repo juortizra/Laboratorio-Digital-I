@@ -14,22 +14,15 @@ A continuación, se muestra una tabla con las principales diferencias técnicas:
 | **Capacidad de corriente de salida**   | Puede hundir hasta 8 mA y suministrar 0.4 mA              | Puede hundir o suministrar hasta 4 mA                  |
 | **Rango de temperatura de operación**  | 0°C a 70°C                                              | -55°C a 125°C                                          |
 
+### Gráficas en el osciloscopio
+A continuación se muestran las gráficas obtenidas en el osciloscopio del oscilador de anillos para el TTL y el CMOS.
+- TTL
 
-## Parte 2: Circuitos equivalentes de cada negador en TTL y CMOS
- - TTL
+![TTL](./Tiempos_TTL.png)
+ - CMOS
+   
+![CMOS](./Tiempo_CMOS.png)
 
-![TTL](./TTL1.png)
-
-- CMOS
-![TTL](./CMOS1.png)
-
-## Señal cuadrada para medir tensión
-
-
-## Parte 2: 
-1. Determinar el fan-in y fan-out de cada uno de los dispositivos.
-2. Determinar la disipación de potencia.
-3. Proponer e implementar un circuito de entrada y de salida para cada uno de los dispositivos teniendo en cuenta los parámetros de cada tecnología para observar el comportamiento del mismo.
 
 ### Comparación de Datos Experimentales Vs. Teóricos
 
@@ -43,6 +36,22 @@ A continuación, se muestra una tabla con las principales diferencias técnicas:
 | talm (Tiempo de alineación)    | 12 ns              | No disponible   | N/A                  | 840 ns              | No disponible       | N/A                |
 | VIL (Voltaje Bajo de Entrada)  | 2.08 V             | 0.8 V           | Mayor de lo esperado | 1.67 V              | 1/3 VDD (≈1.67 V a 5V) | Dentro del rango   |
 | VIH (Voltaje Alto de Entrada)  | 3.47 V             | 2 V             | Mayor de lo esperado | 2.72 V              | 2/3 VDD (≈3.33 V a 5V) | Lig. menor         |
+
+## Parte 2:
+### Circuitos equivalentes de cada negador en TTL y CMOS
+ - TTL
+
+![TTL](./TTL1.png)
+ - CMOS
+   
+![TTL](./CMOS1.png)
+
+## Señal cuadrada para medir tensión
+
+1. Determinar el fan-in y fan-out de cada uno de los dispositivos.
+2. Determinar la disipación de potencia.
+3. Proponer e implementar un circuito de entrada y de salida para cada uno de los dispositivos teniendo en cuenta los parámetros de cada tecnología para observar el comportamiento del mismo.
+
 
 
 ## Parte 3: 
