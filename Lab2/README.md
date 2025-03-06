@@ -111,7 +111,71 @@ Utilizando la herramienta de simulación online plcsimulator, se llevó a cabo l
  Link: https://app.plcsimulator.online/ugBNkyt7YDsvcPpc3VFT
 
  ## **4. Descripción en lenguaje HDL**
+ 
+ module top (
+  input I3,
+  input I2,
+  input I1,
+  input I0,
+  output Q0,
+  output Q1,
+  output Q2,
+  output Q3,
+  output Q4
+);
+  assign Q1 = ((I0 & ~ I3) | (I1 & ~ I3));
+  assign Q2 = ~ I1;
+  assign Q0 = ~ I0;
+  assign Q3 = I2;
+  assign Q4 = I3;
+endmodule
+
+- El anterior codigo fue construido exportando un codio verilog del circuito creado en el software Digital; como se puede apreciar es un modulo que se basa en logica combinacional.
+  
+####Localizacion de pines
+# LOCATE COMP "clk" SITE "P6";
+# IOBUF PORT "clk" IO_TYPE=LVCMOS33;
+# FREQUENCY PORT "clk" 25 MHZ;
+
+# LOCATE COMP "a" SITE "M13"; # V7.1
+
+LOCATE COMP "I0" SITE "C4";
+IOBUF PORT "I0" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "I1" SITE "D4";
+IOBUF PORT "I1" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "I2" SITE "D3";
+IOBUF PORT "I2" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "I3" SITE "E3";
+IOBUF PORT "I3" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "Q0" SITE "G14";
+IOBUF PORT "Q0" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "Q1" SITE "G13";
+IOBUF PORT "Q1" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "Q2" SITE "F12";
+IOBUF PORT "Q2" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "Q3" SITE "F13";
+IOBUF PORT "Q3" IO_TYPE=LVCMOS33;
+
+LOCATE COMP "Q4" SITE "F14";
+IOBUF PORT "Q4" IO_TYPE=LVCMOS33;
+
+- El anterior codigo es una descripcion que enviamos a la FPGA para ubicar en que pines van a estar las salidas y las entradas, teniendo en cuenta el mapeo de los pines de la FPGA Colorlight y que las salidas y entradas deben tener un nivel logico de 3.3 V
+  
  ## **5. Síntesis en FPGA**
+Para el uso de la FPGA nos ayudamos de un video introductorio del profesor Johnny con el cual pudimos entender como implementar los diferentes archivos y modulos necesarios para que la comunicación entre la FPGA y nuestro circuito fuera exitoso, para esto fue necesario apreciar principalmente los siguientes aspectos:
+- La FPGA colorlight se comunica mediante un modulo CRIUS con el computador, para la implementacion de este modulo es importante identificar las conexiones de los pines Ground, VCC, CTS, TXT, RX, DTR con la FPGA, lo cual fue posible ayudandonos del comando Make-help, que permitio entender las conexiones de dichos pines.
+- Despues se implemento el codigo de Verilog generado por Digital en un archivo top.v, el cual implementaba la logica necesaria para que los actuadores reaccionaran segun el comportamiento de las entradas.
+- Por ultimo se realizo el mapeo de los pines y se conecto la  FPGA con el circuito.
+
+ Nota: Es importante destacar que la FPGA color light solo permite la conexion de entradas en su primer cuadrante de pines.
+ 
  ## **6. Conclusiones** 
 
 * Se logró estructurar el sistema a través de un modelo de caja negra, donde se identificaron claramente las entradas y salidas, permitiendo una mejor comprensión de la función de cada componente.
