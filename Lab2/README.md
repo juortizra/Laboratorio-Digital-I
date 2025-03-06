@@ -113,14 +113,14 @@ Utilizando la herramienta de simulación online plcsimulator, se llevó a cabo l
  ## **4. Descripción en lenguaje HDL**
  
  module top (
-  input I3,
-  input I2,
-  input I1,
-  input I0,
-  output Q0,
-  output Q1,
-  output Q2,
-  output Q3,
+  input I3
+  input I2
+  input I1
+  input I0
+  output Q0
+  output Q1
+  output Q2
+  output Q3
   output Q4
 );
   assign Q1 = ((I0 & ~ I3) | (I1 & ~ I3));
