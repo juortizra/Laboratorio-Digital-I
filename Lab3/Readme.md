@@ -1,5 +1,5 @@
 # Diseño de un voltímetro de Vp (tensión pico) para una red monofásica de 120 Vrms
-## **Dominio Comportamental**
+## 1) **Dominio Comportamental**
 ## Requerimientos del Sistema
 
 ### Requerimientos Funcionales
