@@ -81,7 +81,7 @@ En esencia, este oscilador se forma conectando en serie un número impar de comp
 
 ### Graficas y circuito de simulacion
 
-![TTL](./CMOS.png)
+![TTL](./ANILLO1.jpg)
 
-![TTL](./TTL.png)
+![TTL](./ANILLO2.jpg)
 **Comparación:** En ambos circuitos se muestra una forma de onda que es rectangular, y no coincide con lo planteado en las simulaciones; sin embargo, cómo es de esperarse, los tiempos de propagación de las compuertas CMOS son menores, y por tanto, la frecuencia en la que oscila el anillo es 3 MHz mayor que la TTL. 
