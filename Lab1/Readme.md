@@ -33,6 +33,7 @@ A continuación se muestran las gráficas obtenidas en el osciloscopio del oscil
 ![CMOS](./Tiempos_CMOS.png)
 
 Nótese cómo los tiempos del CMOS son menores que el TTL, coincidiendo satisfactoriamente con la teoría. 
+### Gráficas y circuito en la simulación
 
 ### Comparación de Datos Experimentales Vs. Teóricos
 
