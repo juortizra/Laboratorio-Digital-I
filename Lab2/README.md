@@ -23,7 +23,7 @@ Se plantea inicilamente el comportamiento esperado por el sistema, se utiliza co
 
 ![Diagrama de Caja Negra](./CajaN.png)
 
-Como siguiente paso, se propone la tabla de verdad considerando todos los posibles casos, en este punto hacemos uso de la condición Don't Care y de las siguientes condiciones(facilitan la construcción de la tabla de verdad dadas las definiciones de los parametros):
+Como siguiente paso, se propone la tabla de verdad considerando todos los posibles casos:
 
 ![Tabla de Verdad](./TablaV.png)
 
