@@ -36,10 +36,10 @@ Nótese cómo los tiempos del CMOS son menores que el TTL, coincidiendo satisfac
 ### Gráficas y circuito en la simulación
 - TTL
 
-![TTL](./TTL3.png)
+![TTL](./TMOS3.jpg)
  - CMOS
    
-![CMOS](./CMOS3.png)
+![CMOS](./CMOS3.jpg)
 ### Comparación de Datos Experimentales Vs. Teóricos
 
 | Parámetro                      | Experimental (TTL)  | Teórico (TTL)   | Diferencia           | Experimental (CMOS) | Teórico (CMOS)      | Diferencia         |
