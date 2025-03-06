@@ -37,7 +37,4 @@
 
 ### Diseño de cada módulo en compuertas
 
-
-## 2) Dominio estructural
-### Diagramas de cajas negras por módulo
-
+## 3) Dominio Fisico
