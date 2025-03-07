@@ -78,27 +78,7 @@ El montaje completo se implementó en el labortatorio; sin embargo, al correr el
 - Si se detectan errores, documenta las posibles causas y las correcciones aplicadas.
 - Realiza las modificaciones necesarias y repite las pruebas.
 
-##### Informe Final:
-- Prepara un informe que incluya:
-  - Descripción del sistema.
-  - Diagramas esquemáticos.
-  - Resultados de las pruebas.
-  - Conclusiones y recomendaciones.
-
----
-
-#### 7. Video de Explicación (Opcional)
-
-- Graba un video corto (máximo 5 minutos) explicando:
-  - El flujo de diseño.
-  - Las pruebas realizadas.
-  - Los resultados obtenidos.
-  - Las conclusiones finales.
-
----
-
-
-- **Seguridad:** Siempre prioriza la seguridad al trabajar con altos voltajes. Si es posible, utiliza un transformador reductor para realizar pruebas iniciales con voltajes más bajos.
-- **Iteración:** Si encuentras errores, repite las pruebas después de realizar las correcciones necesarias.
-- **Documentación:** Mantén un registro detallado de todas las pruebas y resultados para facilitar la depuración y la mejora del sistema.
+##Conclusiones
+- Verificar correctamente los termianles de alimentación de ambas tensiones. Aunque todo el circuito comparte la misma tierra, es importante garantizar que el voltaje en el ADC y en la FPGA no exceda el máximo permitido por la hoja de datos.
+- La implementación de un ADC es de gran utilidad para el análisis de señales analógicas en dispositivos digitales. Entre mayor sean los bits de salida del conversor, mejor será la precisión del dispositivo.
 
