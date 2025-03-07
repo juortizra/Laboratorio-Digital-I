@@ -191,6 +191,8 @@ Para el uso de la FPGA nos ayudamos de un video introductorio del profesor Johnn
 - Por ultimo se realizo el mapeo de los pines y se conecto la  FPGA con el circuito.
 
  Nota: Es importante destacar que la FPGA color light solo permite la conexion de entradas en su primer cuadrante de pines.
+
+ ### **Video YouTube: https://youtu.be/lZNueuMEk2o**.
  
  ## **6. Conclusiones** 
 
