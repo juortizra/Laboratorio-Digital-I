@@ -55,7 +55,12 @@ Para terminar hay que tener en cuenta que la dirección I2C de la LCD 16x2 con e
 
 ## Implementación de la LCD en la FPGA
 
+Para iniciar la implementación de la LCD en la FPGA Colorlight se idearon las siguientes maquinas de estado:
+
+* Maquina de estados para el protocolo I2C : Dicha maquina emula el protocolo I2C antes descrito, de forma que solo se incia si otra maquina de estados que llamaremos "controlador" le envia una señal de inicio, además de generar una señal "BUSY" para indicar que la línea SDA esta ocupada realizando una operación e implementa contadores para poder escribir correctamente la direccion de 7 bits, el bit de escritura y los 8 bits de datos.
+  
 ![Diagrama](./Maquina11.png)
 
+* Maquina de estado del controlador : Dicha maquina nos permite repetir la secuencia I2C las veces que queramos mientras "BUSY = 0", es decir mientras la línea SDA no este ocupada en una operación, enviando la señal de incio a la maquina de estados I2C, la dirección I2C asociada a la LCD y el dato o comando que querramos enviar, en este caso para escribir "humedad suelo %" tuvimos que hacer 101 repeticiones, cuando se sobrepase dicho número de repeticiones la secuencia I2C no se repertirá más como se puede obsevar en la maquina donde la cantidad de repeticiones esta representada por la palabra "Rep" y se finalizara la transacción de datos en el estado "FINISH". Es importante destacar que el valor o dato enviado esta asociado a un número de repetión especifico, por ende el número de datos enviados es igual al número de repetiones, en nuestro caso 101.
 
 ![Diagrama](./Maquina2.png)
