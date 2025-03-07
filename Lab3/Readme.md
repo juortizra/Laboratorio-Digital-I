@@ -36,7 +36,7 @@
 ![Diagrama](./CajaNegra.png)
 
 ### Diseño del circuito en compuertas lógicas
-
+![Diagrama](./Compuertas.jpg)
 
 ### Descripción del diseño en HDL
 
@@ -48,6 +48,15 @@ Posterior al escalado, la magnitud resultante puede oscilar en un rango entre 12
 
 ## 3) Dominio Fisico
 ### Protocolo de Ensayo y Prueba
+
+El montaje del circuito se realizó en dos partes. Una de ellas contenía las pantllas 7 segmentos con sus respectivos decodificadores, y en la otra se encontraba el conversor ADC0808 con la salida de voltaje ajustada del transformador. A continuación se anexan los planos esquemáticos. 
+
+- Montaje transformador y ADC
+
+![Esquematico1](./Esquematico_1.JPG)
+
+- Montaje displays y decondificadores
+![Esquematico2](./Esquematico_2.JPG)
 
 #### 1. Preparación del Entorno
 
