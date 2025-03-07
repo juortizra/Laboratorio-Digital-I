@@ -67,5 +67,7 @@ Para iniciar la implementación de la LCD en la FPGA Colorlight se idearon las s
 
 Finalmente para poder escribir correctamente en la LCD, se debia enviar la siguiente secuencia de inicialización: Reset, 5ms de espera, Reset, 160us de espera, Reset, Modo 4 bits, Function set, Display off, Clear display, Entry mode set, Display on; trabajamos en modo de 4 bits, ya que el modulo PCF8574 solo puede controlar 4 pines de datos de la LCD; para enviar los comandos Reset y Modo 4 bits deberemos enviar primero el comando con BL=1, E=1, RW=0, RS=0 y luego con E=0, para que la LCD los guarde; a partir de el comando Function set la lógica será similar con la diferencia de que como ya ingresamos a modo 4 bits tendremos que dividir los comandos en los 4 bits mas signficativos y los 4 menos significatvos para enviar cada uno por parte con la secuencia BL=1, E=1, RW=0, RS=0 y luego con E=0, de manera que para enviar cada comando de Functicon set en adelante se necesitará enviar 4 bytes de información; para mostrar caracteres en la LCD debemos seguir la logica de envio antes mencionada con la diferencia de que RS=1, para el envio de caracteres nos guiaremos de la siguiente tabla :
 
+![Diagrama](./Caracteres.png)
+
 
 
