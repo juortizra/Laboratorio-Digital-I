@@ -74,10 +74,6 @@ Los decodificadores BCD 7448 se conectaron a los displays 7 segmentos de acuerdo
 El montaje completo se implementó en el labortatorio; sin embargo, al correr el código, no se logró que en la salida de mostrara la medida del voltímetro. 
 
 
-##### Identificación de Errores:
-- Si se detectan errores, documenta las posibles causas y las correcciones aplicadas.
-- Realiza las modificaciones necesarias y repite las pruebas.
-
 ##Conclusiones
 - Verificar correctamente los termianles de alimentación de ambas tensiones. Aunque todo el circuito comparte la misma tierra, es importante garantizar que el voltaje en el ADC y en la FPGA no exceda el máximo permitido por la hoja de datos.
 - La implementación de un ADC es de gran utilidad para el análisis de señales analógicas en dispositivos digitales. Entre mayor sean los bits de salida del conversor, mejor será la precisión del dispositivo.
