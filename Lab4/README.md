@@ -88,10 +88,15 @@ como podemos observar la secuencia es bastante larga y poco clara, lo cual es de
 Además tambien fue posible observar el consumo de recursos de nuestro diseño:
 
 Info: Logic utilisation before packing:
+
 Info:     Total LUT4s:       940/24288     3%
+
 Info:         logic LUTs:    860/24288     3%
+
 Info:         carry LUTs:     80/24288     0%
+
 Info:           RAM LUTs:      0/ 3036     0%
+
 Info:          RAMW LUTs:      0/ 6072     0%
 
 Info:      Total DFFs:       141/24288     0%
