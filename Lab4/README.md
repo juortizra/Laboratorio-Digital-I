@@ -6,8 +6,16 @@ En el marco de los objetivos de desarrollo planteados por la Organización de la
 
 ## Caracterizacion de la LCD 16x2 y el modulo PCF8574
 
-Para iniciar la implmentación de la LCD en nuestra FPGA primero se investigaron sus condiciones de operación y su conexion con el modulo adaptador I2C PCF8574, dicha información se puede encontrar en las siguientes paginas: https://simple-circuit.com/arduino-i2c-lcd-pcf8574/ y https://www.vishay.com/docs/37484/lcd016n002bcfhet.pdf , 
+Para iniciar la implmentación de la LCD en nuestra FPGA primero se investigaron sus condiciones de operación y su conexion con el modulo adaptador I2C PCF8574, dicha información se puede encontrar en las siguientes paginas: https://simple-circuit.com/arduino-i2c-lcd-pcf8574/ y https://www.vishay.com/docs/37484/lcd016n002bcfhet.pdf , en la primera pagina encontraremos la función de cada pin de la LCD y los comandos necesarios para realizar su secuencia de inicio, de dicha información tuvimos en cuenta lo siguiente para la implementación de nuestra LCD en la FPGA Colorlight 8.2V :
 
+## Pin D7:
+## Pin D6:
+## Pin D5:
+## Pin D4:
+## Pin BL:
+## Pin E:
+## Pin RW:
+## Pin RS:
 
 | Pines PCF8574 | Pines LCD |
 |--------------|----------|
