@@ -103,4 +103,8 @@ Info:      Total DFFs:       141/24288     0%
 
 Discho informe de utilización de recursos nos indica que el diseño usa 940 de 24,288 LUTs (3%), de las cuales 860 son para lógica combinacional y 80 para operaciones de acarreo, no se emplea LUTs como memoria RAM; además, solo 141 Flip-Flops (DFFs) están en uso, representando menos del 1% de los disponibles en la FPGA, esto sugiere que el diseño es pequeño en comparación con la capacidad total del dispositivo, dejando margen para futuras mejoras o expansiones sin preocupaciones de recursos. 
 
+## Resultado
+
+![Diagrama](./Pantalla.jpg)
+
 
