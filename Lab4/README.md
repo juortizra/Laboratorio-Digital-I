@@ -85,7 +85,17 @@ como podemos observar la secuencia es bastante larga y poco clara, lo cual es de
 * **Warning: The network is combinational (run "fraig" or "fraig_sweep")** :  Significa que partes del diseño no tienen Flip-Flops, solo lógica combinacional.
 * **Warnings: 1 unique messages, 1 total** : Este mensaje significa que Yosys generó solo una advertencia única durante la síntesis.
 
+Además tambien fue posible observar el consumo de recursos de nuestro diseño:
 
+Info: Logic utilisation before packing:
+Info:     Total LUT4s:       940/24288     3%
+Info:         logic LUTs:    860/24288     3%
+Info:         carry LUTs:     80/24288     0%
+Info:           RAM LUTs:      0/ 3036     0%
+Info:          RAMW LUTs:      0/ 6072     0%
 
+Info:      Total DFFs:       141/24288     0%
+
+Discho informe de utilización de recursos nos indica que el diseño usa 940 de 24,288 LUTs (3%), de las cuales 860 son para lógica combinacional y 80 para operaciones de acarreo, no se emplea LUTs como memoria RAM; además, solo 141 Flip-Flops (DFFs) están en uso, representando menos del 1% de los disponibles en la FPGA, esto sugiere que el diseño es pequeño en comparación con la capacidad total del dispositivo, dejando margen para futuras mejoras o expansiones sin preocupaciones de recursos. 
 
 
