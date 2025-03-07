@@ -105,6 +105,6 @@ Discho informe de utilización de recursos nos indica que el diseño usa 940 de 
 
 ## Resultado
 
-![Diagrama](./Pantalla.jpg)
+![Diagrama](./pantalla.jpg)
 
 
