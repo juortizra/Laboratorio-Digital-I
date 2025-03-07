@@ -4,9 +4,13 @@
 
 En el marco de los objetivos de desarrollo planteados por la Organización de las Naciones Unidas, específicamente los objetivos de hambre cero y ciudades sostenibles, planteamos como proyecto un sistema digital de automatización y monitoreo de cultivos de tomates que estén sobre terrazas de edificios en la ciudad de Bogotá, como propuesta para aportar al desarrollo de estos objetivos. Para la implementación de dicho proyecto, se creó un prototipo en el que, mediante un sensor capacitivo de humedad del suelo basado en el protocolo I2C (Soil Sensor Seesaw), se monitorea dicha variable, mostrándola en una pantalla LCD V1.4 16×2 con un módulo PCF8574 integrado, que también está basado en ese mismo protocolo; además, se usa esa información de humedad del suelo para controlar dicha variable con un sistema de riego, de manera que esta permanecería dentro de un rango establecido que favorezca el buen desarrollo del cultivo. Debido a la complejidad del sistema y la numerosa cantidad de máquinas de estado que se manejan paralelamente dentro del prototipo, en este documento nos centraremos unicamente en el flujo de diseño para implementar la pantalla LCD en nuestro sistema.
 
+## Protocolo I2C
+
+
+
 ## Caracterizacion de la LCD 16x2 y el modulo PCF8574
 
-Para iniciar la implmentación de la LCD en nuestra FPGA primero se investigaron sus condiciones de operación y su conexion con el modulo adaptador I2C PCF8574, dicha información se puede encontrar en las siguientes paginas: https://simple-circuit.com/arduino-i2c-lcd-pcf8574/ y https://www.vishay.com/docs/37484/lcd016n002bcfhet.pdf , en la primera pagina encontraremos la función de cada pin de la LCD y los comandos necesarios para realizar su secuencia de inicio, de dicha información tuvimos en cuenta lo siguiente para la implementación de nuestra LCD en la FPGA Colorlight 8.2V :
+Antes de implementar la LCD en nuestra FPGA, se investigaron sus condiciones de operación y su conexion con el modulo adaptador I2C PCF8574, dicha información se puede encontrar en las siguientes paginas: https://simple-circuit.com/arduino-i2c-lcd-pcf8574/ y https://www.vishay.com/docs/37484/lcd016n002bcfhet.pdf , en la primera pagina encontraremos la función de cada pin de la LCD y los comandos necesarios para realizar su secuencia de inicio, de dicha información tuvimos en cuenta lo siguiente para la implementación de nuestra LCD en la FPGA Colorlight 8.2V :
 
 * Pines $D_7$, $D_6$, $D_5$, $D_4$ : Son los pines de datos, se usan para enviar comandos y caracteres a la pantalla en modo de 4 bits.
 * Pin BL : Controla la retroiluminación de la pantalla, puede encenderse o apagarse según sea necesario.
@@ -21,11 +25,11 @@ Para iniciar la implmentación de la LCD en nuestra FPGA primero se investigaron
 * Entry mode set : Configura el desplazamiento del cursor y el texto. Para escribir este comando se debe enviar a la LCD 0x06 (cursor avanza a la derecha) en hexadecimal, con RS = 0 y RW = 0.
 * Display on : Enciende la pantalla y puede habilitar el cursor y parpadeo. Para escribir este comando se debe enviar a la LCD 0x0C (sin cursor, sin parpadeo), 0x0E (con cursor) o 0x0F (cursor parpadeante), en hexadecimal, con RS = 0 y RW = 0.
 
-En la segunda pagina encontraremos la forma en la que esta conectada la LCD 16x2 con el módulo adpatador I2C PCF8574, lo cual se puede observar en la siguiente imagen: 
+En la segunda pagina encontraremos la forma en la que esta conectada la LCD 16x2 con el módulo adpatador I2C PCF8574, lo cuál se puede observar en la siguiente imagen: 
 
-<p align="center">
-  <img src="PCF8574.png">
-</p>
+![Diagrama](./PCF8574.png)
+
+y se puede entender mejor con la siguiente tabla, donde los pines P7-P0 representan los bits desde el mas significativo al menos significativo del byte enviado por la línea SDA.
 
 | Pines PCF8574 | Pines LCD |
 |--------------|----------|
@@ -38,6 +42,9 @@ En la segunda pagina encontraremos la forma en la que esta conectada la LCD 16x2
 | P1          | RW       |
 | P0          | RS       |
 
+Para terminar hay que tener en cuenta que la dirección I2C de la LCD 16x2 con el modulo POF8574 integrado es 0x27 en hexadecimal.
+
+## Implementación de la LCD en la FPGA
 
 ![Diagrama](./Maquina11.png)
 
