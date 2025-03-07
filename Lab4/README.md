@@ -71,8 +71,8 @@ Finalmente para poder escribir correctamente en la LCD, se debia enviar la sigui
 
 ![Diagrama](./Caracteres.png)
 
-![Diagrama](./RTL.png)
+![Diagrama](./RTL.jpg)
 
-![Diagrama](./SIM.png)
+![Diagrama](./SIM.jpg)
 
 
