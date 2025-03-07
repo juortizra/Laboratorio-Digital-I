@@ -79,7 +79,13 @@ podemos observar los módulos I2C_controlador e I2C_FPFA que corresponden a las 
 
 ![Diagrama](./SIM.jpg)
 
-como podemos observar la secuencia es bastante larga y poco clara, lo cual es debido a las 101 repeticiones que hacemos, aun asi en la simulación es posible diferenciar los tiempos de espera de 5ms, 160us y 2ms antes mencionados, además de que es posible ver como siempre la dirección a llamar se mantiene en 0x27.
+como podemos observar la secuencia es bastante larga y poco clara, lo cual es debido a las 101 repeticiones que hacemos, aun asi en la simulación es posible diferenciar los tiempos de espera de 5ms, 160us y 2ms antes mencionados, además de que es posible ver como siempre la dirección a llamar se mantiene en 0x27. A la hora de realizar la sintesis del codigo tuvimos los siguientes errores :
+
+* **Warning: Yosys has only limited support for tri-state logic at the moment** : significa que Yosys, la herramienta de síntesis para FPGA, tiene soporte limitado para la lógica triestado ('z'), porque muchas FPGAs modernas, como la Lattice ECP5 (usada en la Colorlight 8.2), no tienen buffers de tres estados internos.
+* **Warning: The network is combinational (run "fraig" or "fraig_sweep")** :  Significa que partes del diseño no tienen Flip-Flops, solo lógica combinacional.
+* **Warnings: 1 unique messages, 1 total** : Este mensaje significa que Yosys generó solo una advertencia única durante la síntesis.
+
+
 
 
 
