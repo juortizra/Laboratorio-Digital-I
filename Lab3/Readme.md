@@ -35,7 +35,16 @@
 ### Diagrama de caja negra
 ![Diagrama](./CajaNegra.png)
 
-### Diseño de cada módulo en compuertas
+### Diseño del circuito en compuertas lógicas
+
+
+### Descripción del diseño en HDL
+
+El codigo planteado para la realización del laboratorio se encuentra adjunto en la carpeta respectiva a la práctica 3. 
+- En el módulo planteado se expresa el Clock del sistema; las entradas que lee la FPGA de conversor ADC; y las salidas para cada uno de los decodificadores BCD.
+- Si se desea mapear 120 VRMS en 255 (entrada binaria), se debe realizar la división entre ambos valores para deducir cuánto voltaje equivale un único bit en la entrada. Este resultado se debe multiplicar por la lectura de la FPGA en los pines de entrada _bin_in_, y así obtener obtener en la salida la medición deseada. En el caso máximo, se multiplica 255 (bits de entrada = 5V) por 120, lo que requiere un registro de 15 bits (_mult_registro_) para almacenar el número. 
+
+Posterior al escalado, la magnitud resultante puede oscilar en un rango entre 120 y 0, por lo que se almacena en forma binaria en un registro de 7 bits, para luego ser dividido en centenas, decenas, y unidades, y ser enviado a los decodificadores BCD. Los decodificadores convierten el número obtenido a base 10, y lo muestran en tiempo real en los _display 7 segmentos_.
 
 ## 3) Dominio Fisico
 ### Protocolo de Ensayo y Prueba
