@@ -71,8 +71,15 @@ Finalmente para poder escribir correctamente en la LCD, se debia enviar la sigui
 
 ![Diagrama](./Caracteres.png)
 
+Teniendo en cuenta todo lo anterior, se implemento un código en la FPGA que realizará esa lógica, mediante tres módulos diferentes como se puede ver a continuación en la represetacion RTL del circuito:
+
 ![Diagrama](./RTL.jpg)
 
+podemos observar los módulos I2C_controlador e I2C_FPFA que corresponden a las maquinas de estados controlador y protocolo I2C, además de un tecer módulo no mencionado anteriormente el cuál divide la frecuencia del clock de la FPGA Colorlight que es de 25MHz a 100kHz, que es la frecuencia con la que se debe trabajar el protcolo I2C en modo normal. También es posible visualizar otras conexiones entre los módulos las cuales no se mencionaron pues hacen parte de la implemetación de los sensores más no de la implementación de la LCD. A continuación podemos observar la simulación de la secuencia enviada por los buses SDA y SCL :
+
 ![Diagrama](./SIM.jpg)
+
+como podemos observar la secuencia es bastante larga y poco clara, lo cual es debido a las 101 repeticiones que hacemos, aun asi en la simulación es posible diferenciar los tiempos de espera de 5ms, 160us y 2ms antes mencionados, además de que es posible ver como siempre la dirección a llamar se mantiene en 0x27.
+
 
 
