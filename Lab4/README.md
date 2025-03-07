@@ -57,7 +57,7 @@ Para terminar hay que tener en cuenta que la dirección I2C de la LCD 16x2 con e
 
 Para iniciar la implementación de la LCD en la FPGA Colorlight se idearon las siguientes maquinas de estado:
 
-* **Maquina de estados para el protocolo I2C** : Dicha maquina emula el protocolo I2C antes descrito, de forma que solo se incia si otra maquina de estados que llamaremos "controlador" le envia una señal de inicio, además de generar una señal "BUSY" para indicar que la línea SDA esta ocupada realizando una operación e implementa contadores para poder escribir correctamente la direccion de 7 bits, el bit de escritura y los 8 bits de datos.
+* **Maquina de estados para el protocolo I2C** : Dicha maquina emula el protocolo I2C antes descrito, de forma que solo se incia si otra maquina de estados que llamaremos "controlador" le envia una señal de inicio, además de generar una señal "BUSY" para indicar que la línea SDA esta ocupada realizando una operación e implementa contadores para poder escribir correctamente la direccion de 7 bits, el bit de escritura y los 8 bits de datos; por ultimo tiene en cuenta el tri-state de SDA para que el maestro suelte el bus y le de la posibilidad de responder al esclavo.
   
 ![Diagrama](./Maquina11.png)
 
