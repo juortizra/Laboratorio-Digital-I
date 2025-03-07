@@ -17,6 +17,8 @@ La comunicación en I2C sigue una secuencia bien definida controlada por un disp
 * **Transmisión de datos (DATA)** : El maestro o esclavo envía datos de 8 bits, comenzando con el bit más significativo (MSB), después de cada byte el receptor envía un ACK si el dato fue recibido correctamente.
 * **Condición de parada (STOP)** : El maestro genera una transición de bajo a alto en SDA mientras SCL está en alto, esto indica el final de la comunicación y el bus regresa al estado de reposo.
 
+![Diagrama](./I2C.png)
+
 ## Caracterizacion de la LCD 16x2 y el modulo PCF8574
 
 Antes de implementar la LCD en nuestra FPGA, se investigaron sus condiciones de operación y su conexion con el modulo adaptador I2C PCF8574, dicha información se puede encontrar en las siguientes paginas: https://simple-circuit.com/arduino-i2c-lcd-pcf8574/ y https://www.vishay.com/docs/37484/lcd016n002bcfhet.pdf , en la primera pagina encontraremos la función de cada pin de la LCD y los comandos necesarios para realizar su secuencia de inicio, de dicha información tuvimos en cuenta lo siguiente para la implementación de nuestra LCD en la FPGA Colorlight 8.2V :
@@ -65,7 +67,7 @@ Para iniciar la implementación de la LCD en la FPGA Colorlight se idearon las s
 
 ![Diagrama](./Maquina2.png)
 
-Finalmente para poder escribir correctamente en la LCD, se debia enviar la siguiente secuencia de inicialización: Reset, 5ms de espera, Reset, 160us de espera, Reset, Modo 4 bits, Function set, Display off, Clear display, Entry mode set, Display on; trabajamos en modo de 4 bits, ya que el modulo PCF8574 solo puede controlar 4 pines de datos de la LCD; para enviar los comandos Reset y Modo 4 bits deberemos enviar primero el comando con BL=1, E=1, RW=0, RS=0 y luego con E=0, para que la LCD los guarde; a partir de el comando Function set la lógica será similar con la diferencia de que como ya ingresamos a modo 4 bits tendremos que dividir los comandos en los 4 bits mas signficativos y los 4 menos significatvos para enviar cada uno por parte con la secuencia BL=1, E=1, RW=0, RS=0 y luego con E=0, de manera que para enviar cada comando de Functicon set en adelante se necesitará enviar 4 bytes de información; para mostrar caracteres en la LCD debemos seguir la logica de envio antes mencionada con la diferencia de que RS=1, para el envio de caracteres nos guiaremos de la siguiente tabla :
+Finalmente para poder escribir correctamente en la LCD, se debia enviar la siguiente secuencia de inicialización: Reset, 5ms de espera, Reset, 160us de espera, Reset, Modo 4 bits, Function set, Display off, Clear display, espera de 2ms, Entry mode set, Display on; trabajamos en modo de 4 bits, ya que el modulo PCF8574 solo puede controlar 4 pines de datos de la LCD; para enviar los comandos Reset y Modo 4 bits deberemos enviar primero el comando con BL=1, E=1, RW=0, RS=0 y luego con E=0, para que la LCD los guarde; a partir de el comando Function set la lógica será similar con la diferencia de que como ya ingresamos a modo 4 bits tendremos que dividir los comandos en los 4 bits mas signficativos y los 4 menos significatvos para enviar cada uno por parte con la secuencia BL=1, E=1, RW=0, RS=0 y luego con E=0, de manera que para enviar cada comando de Functicon set en adelante se necesitará enviar 4 bytes de información; para mostrar caracteres en la LCD debemos seguir la logica de envio antes mencionada con la diferencia de que RS=1, para el envio de caracteres nos guiaremos de la siguiente tabla :
 
 ![Diagrama](./Caracteres.png)
 
