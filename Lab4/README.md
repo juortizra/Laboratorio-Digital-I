@@ -6,7 +6,16 @@ En el marco de los objetivos de desarrollo planteados por la Organización de la
 
 ## Protocolo I2C
 
+El protocolo I2C (Inter-Integrated Circuit) es un estándar de comunicación serie desarrollado por Philips Semiconductor (ahora NXP) que permite la interconexión de múltiples dispositivos utilizando solo dos líneas: SDA (Serial Data Line) para la transmisión de datos y SCL (Serial Clock Line) para la sincronización; es un protocolo ampliamente utilizado en sistemas embebidos, sensores, pantallas LCD y microcontroladores debido a su simplicidad y eficiencia en la comunicación entre dispositivos. I2C funciona bajo un esquema máster-esclavo, donde un dispositivo maestro controla la comunicación y los esclavos responden según su dirección única asignada, soporta velocidades de transmisión desde 100 kHz (modo estándar) hasta varios MHz en modos más avanzados; su capacidad de conectar múltiples dispositivos en el mismo bus sin requerir muchas conexiones físicas lo hace ideal para aplicaciones de bajo consumo y dispositivos integrados.
 
+La comunicación en I2C sigue una secuencia bien definida controlada por un dispositivo maestro que inicia y gestiona la transmisión de datos hacia uno o más dispositivos esclavos. La secuencia es la siguiente:
+
+* Estado de reposo (IDLE) : El bus se encuentra en reposo cuando SCL y SDA están en alto, no hay comunicación activa en el bus y los dispositivos están en espera. 
+* Condición de inicio (START) : El maestro genera una transición de alto a bajo en SDA mientras SCL está en alto, esto indica el inicio de una comunicación.
+* Envío de dirección del esclavo (ADDRESS) : El maestro envía una dirección de 7 bits o 10 bits (según el estándar) del esclavo con el que quiere comunicarse, se añade un bit de lectura/escritura (0 para escritura, 1 para lectura).
+* Confirmación (ACK/NACK) : El esclavo seleccionado responde con un bit de reconocimiento (ACK) bajando la línea SDA, si no hay respuesta (NACK), la comunicación se detiene o el maestro intenta nuevamente.
+* Transmisión de datos (DATA) : El maestro o esclavo envía datos de 8 bits, comenzando con el bit más significativo (MSB), después de cada byte el receptor envía un ACK si el dato fue recibido correctamente.
+* Condición de parada (STOP): El maestro genera una transición de bajo a alto en SDA mientras SCL está en alto, esto indica el final de la comunicación y el bus regresa al estado de reposo.
 
 ## Caracterizacion de la LCD 16x2 y el modulo PCF8574
 
