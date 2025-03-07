@@ -1,0 +1,30 @@
+module voltaje_display (
+    input            clk,        
+    input            reset,     
+    input  [7:0]     bin_in,     
+    output reg [3:0] bcd_centenas, 
+    output reg [3:0] bcd_decenas,    
+    output reg [3:0] bcd_unidades    
+);
+
+    reg [15:0] mult_result; //Guardamos los datos de la multiplicación
+    reg [7:0] voltaje_esc; //
+
+    always @(posedge clk or posedge reset) begin
+        if (reset) begin
+            voltage_es  <= 0;
+            bcd_centenas <= 0;
+            bcd_decenas     <= 0;
+            bcd_unidades    <= 0;
+        end else begin
+            
+            mult_result <= bin_in * 120;
+            voltage_esc <= mult_result / 255;
+            
+            bcd_centenas <= voltage_esc / 100;  //Le saca el residuo y divide por 10. 
+            bcd_decenas     <= (voltage_esc % 100) / 10;
+            bcd_unidades   <= voltage_esc % 10;
+        end
+    end
+
+endmodule
