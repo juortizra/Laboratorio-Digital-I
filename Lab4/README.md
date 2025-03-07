@@ -10,29 +10,29 @@ El protocolo I2C (Inter-Integrated Circuit) es un estándar de comunicación ser
 
 La comunicación en I2C sigue una secuencia bien definida controlada por un dispositivo maestro que inicia y gestiona la transmisión de datos hacia uno o más dispositivos esclavos. La secuencia es la siguiente:
 
-* Estado de reposo (IDLE) : El bus se encuentra en reposo cuando SCL y SDA están en alto, no hay comunicación activa en el bus y los dispositivos están en espera. 
-* Condición de inicio (START) : El maestro genera una transición de alto a bajo en SDA mientras SCL está en alto, esto indica el inicio de una comunicación.
-* Envío de dirección del esclavo (ADDRESS) : El maestro envía una dirección de 7 bits o 10 bits (según el estándar) del esclavo con el que quiere comunicarse, se añade un bit de lectura/escritura (0 para escritura, 1 para lectura).
-* Confirmación (ACK/NACK) : El esclavo seleccionado responde con un bit de reconocimiento (ACK) bajando la línea SDA, si no hay respuesta (NACK), la comunicación se detiene o el maestro intenta nuevamente.
-* Transmisión de datos (DATA) : El maestro o esclavo envía datos de 8 bits, comenzando con el bit más significativo (MSB), después de cada byte el receptor envía un ACK si el dato fue recibido correctamente.
-* Condición de parada (STOP): El maestro genera una transición de bajo a alto en SDA mientras SCL está en alto, esto indica el final de la comunicación y el bus regresa al estado de reposo.
+* **Estado de reposo (IDLE)** : El bus se encuentra en reposo cuando SCL y SDA están en alto, no hay comunicación activa en el bus y los dispositivos están en espera. 
+* **Condición de inicio (START)** : El maestro genera una transición de alto a bajo en SDA mientras SCL está en alto, esto indica el inicio de una comunicación.
+* **Envío de dirección del esclavo (ADDRESS)** : El maestro envía una dirección de 7 bits o 10 bits (según el estándar) del esclavo con el que quiere comunicarse, se añade un bit de lectura/escritura (0 para escritura, 1 para lectura).
+* **Confirmación (ACK/NACK)** : El esclavo seleccionado responde con un bit de reconocimiento (ACK) bajando la línea SDA, si no hay respuesta (NACK), la comunicación se detiene o el maestro intenta nuevamente.
+* **Transmisión de datos (DATA)** : El maestro o esclavo envía datos de 8 bits, comenzando con el bit más significativo (MSB), después de cada byte el receptor envía un ACK si el dato fue recibido correctamente.
+* **Condición de parada (STOP)** : El maestro genera una transición de bajo a alto en SDA mientras SCL está en alto, esto indica el final de la comunicación y el bus regresa al estado de reposo.
 
 ## Caracterizacion de la LCD 16x2 y el modulo PCF8574
 
 Antes de implementar la LCD en nuestra FPGA, se investigaron sus condiciones de operación y su conexion con el modulo adaptador I2C PCF8574, dicha información se puede encontrar en las siguientes paginas: https://simple-circuit.com/arduino-i2c-lcd-pcf8574/ y https://www.vishay.com/docs/37484/lcd016n002bcfhet.pdf , en la primera pagina encontraremos la función de cada pin de la LCD y los comandos necesarios para realizar su secuencia de inicio, de dicha información tuvimos en cuenta lo siguiente para la implementación de nuestra LCD en la FPGA Colorlight 8.2V :
 
-* Pines $D_7$, $D_6$, $D_5$, $D_4$ : Son los pines de datos, se usan para enviar comandos y caracteres a la pantalla en modo de 4 bits.
-* Pin BL : Controla la retroiluminación de la pantalla, puede encenderse o apagarse según sea necesario.
-* Pin E : Habilita la comunicación entre el microcontrolador y la pantalla, un pulso en este pin indica que los datos en los pines D4-D7 deben ser procesados.
-* Pin RW : Define el modo de operación; si está en 0, la pantalla recibe datos (escritura), si está en 1, la pantalla envía datos al microcontrolador (lectura), normalmente se deja en escritura.
-* Pin RS : Determina el tipo de dato enviado, si está en 0, se envía un comando (como clear display), si está en 1, se envían caracteres para ser mostrados en la LCD.
-* Comando Reset : Reinicia la LCD a su estado inicial en 8 bits, se debe enviar 3 veces para incializar la pantalla, con tiempos de espera de 5ms entre el primer-segundo envio y 160us entre el segundo-tercer envio. Para escribir este comando se debe enviar a la LCD 0x03 en hexadecimal, con RS = 0 y RW = 0.
-* Comando Modo 4 bits : Configura la LCD para operar en modo 4 bits, reduciendo los pines de datos. Para escribir este comando se debe enviar a la LCD 0x02 en hexadecimal, con RS = 0 y RW = 0.
-* Function set : Define el modo de datos (4 u 8 bits), número de líneas y tamaño de caracteres. Para escribir este comando se debe enviar a la LCD 0x28 (4 bits, 2 líneas, 5x8) o 0x38 (8 bits, 2 líneas, 5x8), en hexadecimal, con RS = 0 y RW = 0. 
-* Display off : Apaga la pantalla sin borrar la memoria de datos. Para escribir este comando se debe enviar a la LCD 0x08 en hexadecimal, con RS = 0 y RW = 0.
-* Clear display: Borra la pantalla y mueve el cursor a (0,0). Para escribir este comando se debe enviar a la LCD 0x01 en hexadecimal, con RS = 0 y RW = 0.
-* Entry mode set : Configura el desplazamiento del cursor y el texto. Para escribir este comando se debe enviar a la LCD 0x06 (cursor avanza a la derecha) en hexadecimal, con RS = 0 y RW = 0.
-* Display on : Enciende la pantalla y puede habilitar el cursor y parpadeo. Para escribir este comando se debe enviar a la LCD 0x0C (sin cursor, sin parpadeo), 0x0E (con cursor) o 0x0F (cursor parpadeante), en hexadecimal, con RS = 0 y RW = 0.
+* **Pines $D_7$, $D_6$, $D_5$, $D_4$** : Son los pines de datos, se usan para enviar comandos y caracteres a la pantalla en modo de 4 bits.
+* **Pin BL** : Controla la retroiluminación de la pantalla, puede encenderse o apagarse según sea necesario.
+* **Pin E** : Habilita la comunicación entre el microcontrolador y la pantalla, un pulso en este pin indica que los datos en los pines D4-D7 deben ser procesados.
+* **Pin RW** : Define el modo de operación; si está en 0, la pantalla recibe datos (escritura), si está en 1, la pantalla envía datos al microcontrolador (lectura), normalmente se deja en escritura.
+* **Pin RS** : Determina el tipo de dato enviado, si está en 0, se envía un comando (como clear display), si está en 1, se envían caracteres para ser mostrados en la LCD.
+* **Comando Reset** : Reinicia la LCD a su estado inicial en 8 bits, se debe enviar 3 veces para incializar la pantalla, con tiempos de espera de 5ms entre el primer-segundo envio y 160us entre el segundo-tercer envio. Para escribir este comando se debe enviar a la LCD 0x03 en hexadecimal, con RS = 0 y RW = 0.
+* **Comando Modo 4 bits** : Configura la LCD para operar en modo 4 bits, reduciendo los pines de datos. Para escribir este comando se debe enviar a la LCD 0x02 en hexadecimal, con RS = 0 y RW = 0.
+* **Function set** : Define el modo de datos (4 u 8 bits), número de líneas y tamaño de caracteres. Para escribir este comando se debe enviar a la LCD 0x28 (4 bits, 2 líneas, 5x8) o 0x38 (8 bits, 2 líneas, 5x8), en hexadecimal, con RS = 0 y RW = 0. 
+* **Display off** : Apaga la pantalla sin borrar la memoria de datos. Para escribir este comando se debe enviar a la LCD 0x08 en hexadecimal, con RS = 0 y RW = 0.
+* **Clear display** : Borra la pantalla y mueve el cursor a (0,0). Para escribir este comando se debe enviar a la LCD 0x01 en hexadecimal, con RS = 0 y RW = 0.
+* **Entry mode set** : Configura el desplazamiento del cursor y el texto. Para escribir este comando se debe enviar a la LCD 0x06 (cursor avanza a la derecha) en hexadecimal, con RS = 0 y RW = 0.
+* **Display on** : Enciende la pantalla y puede habilitar el cursor y parpadeo. Para escribir este comando se debe enviar a la LCD 0x0C (sin cursor, sin parpadeo), 0x0E (con cursor) o 0x0F (cursor parpadeante), en hexadecimal, con RS = 0 y RW = 0.
 
 En la segunda pagina encontraremos la forma en la que esta conectada la LCD 16x2 con el módulo adpatador I2C PCF8574, lo cuál se puede observar en la siguiente imagen: 
 
@@ -57,10 +57,10 @@ Para terminar hay que tener en cuenta que la dirección I2C de la LCD 16x2 con e
 
 Para iniciar la implementación de la LCD en la FPGA Colorlight se idearon las siguientes maquinas de estado:
 
-* Maquina de estados para el protocolo I2C : Dicha maquina emula el protocolo I2C antes descrito, de forma que solo se incia si otra maquina de estados que llamaremos "controlador" le envia una señal de inicio, además de generar una señal "BUSY" para indicar que la línea SDA esta ocupada realizando una operación e implementa contadores para poder escribir correctamente la direccion de 7 bits, el bit de escritura y los 8 bits de datos.
+* **Maquina de estados para el protocolo I2C** : Dicha maquina emula el protocolo I2C antes descrito, de forma que solo se incia si otra maquina de estados que llamaremos "controlador" le envia una señal de inicio, además de generar una señal "BUSY" para indicar que la línea SDA esta ocupada realizando una operación e implementa contadores para poder escribir correctamente la direccion de 7 bits, el bit de escritura y los 8 bits de datos.
   
 ![Diagrama](./Maquina11.png)
 
-* Maquina de estado del controlador : Dicha maquina nos permite repetir la secuencia I2C las veces que queramos mientras "BUSY = 0", es decir mientras la línea SDA no este ocupada en una operación, enviando la señal de incio a la maquina de estados I2C, la dirección I2C asociada a la LCD y el dato o comando que querramos enviar, en este caso para escribir "humedad suelo %" tuvimos que hacer 101 repeticiones, cuando se sobrepase dicho número de repeticiones la secuencia I2C no se repertirá más como se puede obsevar en la maquina donde la cantidad de repeticiones esta representada por la palabra "Rep" y se finalizara la transacción de datos en el estado "FINISH". Es importante destacar que el valor o dato enviado esta asociado a un número de repetión especifico, por ende el número de datos enviados es igual al número de repetiones, en nuestro caso 101.
+* **Maquina de estado del controlador** : Dicha maquina nos permite repetir la secuencia I2C las veces que queramos mientras "BUSY = 0", es decir mientras la línea SDA no este ocupada en una operación, enviando la señal de incio a la maquina de estados I2C, la dirección I2C asociada a la LCD y el dato o comando que querramos enviar, en este caso para escribir "humedad suelo %" tuvimos que hacer 101 repeticiones, cuando se sobrepase dicho número de repeticiones la secuencia I2C no se repertirá más como se puede obsevar en la maquina donde la cantidad de repeticiones esta representada por la palabra "Rep" y se finalizara la transacción de datos en el estado "FINISH". Es importante destacar que el valor o dato enviado esta asociado a un número de repetión especifico, por ende el número de datos enviados es igual al número de repetiones, en nuestro caso 101.
 
 ![Diagrama](./Maquina2.png)
