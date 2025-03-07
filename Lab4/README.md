@@ -23,6 +23,8 @@ Para iniciar la implmentación de la LCD en nuestra FPGA primero se investigaron
 
 En la segunda pagina encontraremos la forma en la que esta conectada la LCD 16x2 con el módulo adpatador I2C PCF8574, lo cual se puede observar en la siguiente imagen: 
 
+![Diagrama](./PCF8574.png)
+
 | Pines PCF8574 | Pines LCD |
 |--------------|----------|
 | P7          | D7       |
