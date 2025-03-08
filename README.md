@@ -108,11 +108,13 @@ El cronograma inicial planteado en la propuesta sugiere un trabajo distribuido e
 
 La implementación de los actuadores tuvieron retraso de una semana; no obstante, gran parte de lo planeado hasta ese momento ya se encontraba realizado.
 
-## V. **Conclusiones**
+## V. Tamaño de la solución
+
+## VI. **Conclusiones**
 * La implementación del sistema de riego permitió la una automatización eficiente del proceso, asegurando de esta forma que la planta del cultivo reciba el agua necesaria según los niveles de humedad detectados por el sensor. Cabe resaltar que la sincronización entre el sensor y actuador fueron claves para el éxito del sistema, dado que se requirieron manejos efectivos de los datos censados.
  
 * La inclusión de la pantalla LCD y luces LED  mejoro la interacción con el usuario, ya que facilita la supervisión del estado del sistema, proporcionando una referencia visual sobre el funcionamiento del sistemas
 
-## VI. **Trabajos futuros**
+## VII. **Trabajos futuros**
 Como parte de los trabajos futuros en el proyecto se plantea la inclusión de más sensores ambientales que  permitan un monitoreo mas completo de las variables que repercuten en el crecimiento de la planta, se contemplan sensores como los de temperatura, luz y niveles de nutrientes.
 De igual se explorará la posibilidad de mejorar la comunicación entre los sensores y la FPGA, para una mejor eficiencia en la transmisión de datos, y mayor precisión en rangos de activación de los actuadores implementados.
